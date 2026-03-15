@@ -83,325 +83,372 @@
     </header>
 
     <main class="content">
-      <div class="content-header">
-        <h1 class="page-title">Settings</h1>
-        <p class="page-desc">Configure your company profile, invoice defaults, print templates, POS receipts, and item categories — all from one place.</p>
-      </div>
+      <div class="content-inner">
 
-      <!-- How to open -->
-      <div class="callout callout-info">
-        <strong>How to open Settings:</strong> Click <strong>Settings</strong> in the left sidebar under the <em>System</em> section. Only admin users can change settings.
-      </div>
+        <div class="page-hero">
+          <h1>Settings</h1>
+          <p>Configure your company profile, invoice defaults, print templates, POS receipts, and item categories — all from one place. Only admin users can access Settings.</p>
+        </div>
 
-      <!-- Overview screenshot -->
-      <figure class="screenshot-frame">
-        <img src="assets/img/screens/s01-settings-company.jpg" alt="Settings — Company tab overview" loading="lazy"/>
-        <figcaption>Settings page — Company tab (default view)</figcaption>
-      </figure>
+        <div class="callout callout-info">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>To open Settings, click <strong>Settings</strong> in the left sidebar under the <em>System</em> section.</div>
+        </div>
 
-      <p>Settings is divided into <strong>six tabs</strong>. Each tab controls a different part of the system:</p>
-      <table class="docs-table">
-        <thead><tr><th>Tab</th><th>What you configure</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Company</strong></td><td>Company name, VAT no., CR no., contact info, address, logo, and default currency</td></tr>
-          <tr><td><strong>Invoice &amp; Stock</strong></td><td>Whether invoices update stock, default warehouse, and negative-stock rules</td></tr>
-          <tr><td><strong>Print Templates</strong></td><td>Choose the printed layout style for invoices, quotations, and orders</td></tr>
-          <tr><td><strong>POS Receipt</strong></td><td>Thermal/A4 receipt header, footer, and paper width</td></tr>
-          <tr><td><strong>Categories</strong></td><td>Create and manage item categories used in POS</td></tr>
-          <tr><td><strong>Docs</strong></td><td>Quick links to this documentation site</td></tr>
-        </tbody>
-      </table>
+        <!-- Settings overview screenshot -->
+        <div class="doc-section">
+          <h2>Settings overview</h2>
+          <p>The Settings page has <strong>six tabs</strong> across the top. Click any tab to switch between sections:</p>
+          <div class="screenshot">
+            <div class="ss-bar">
+              <div class="ss-dot" style="background:#fe5f57"></div>
+              <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+              <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+              <div class="ss-url">yourcompany.fateherp.com</div>
+            </div>
+            <img class="ss-img" src="assets/img/screens/s01-settings-company.jpg" alt="Settings page — Company tab overview"/>
+            <div class="ss-caption">Settings page — Company tab is shown by default when you open Settings</div>
+          </div>
 
-      <!-- ─── TAB 1: COMPANY ─────────────────────────────── -->
-      <h2 id="company" class="section-heading">Tab 1 — Company</h2>
-      <p>This tab controls the information that appears on every printed document (invoices, quotations, receipts) and in the ZATCA QR code.</p>
+          <table class="data-table">
+            <thead><tr><th>Tab</th><th>What you configure</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Company</strong></td><td>Your legal name, VAT number, CR number, contact details, logo, and default currency</td></tr>
+              <tr><td><strong>Invoice &amp; Stock</strong></td><td>Whether invoices reduce stock, which warehouse to use, and negative-stock rules</td></tr>
+              <tr><td><strong>Print Templates</strong></td><td>The printed layout style for invoices, quotations, and sales orders</td></tr>
+              <tr><td><strong>POS Receipt</strong></td><td>Thermal or A4 receipt header, footer text, and paper width</td></tr>
+              <tr><td><strong>Categories</strong></td><td>Item categories that appear as filter buttons in the POS screen</td></tr>
+              <tr><td><strong>Docs</strong></td><td>Quick links to every section of this documentation site</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-      <h3>Company Information</h3>
-      <figure class="screenshot-frame">
-        <img src="assets/img/screens/s01-settings-company.jpg" alt="Company Information fields" loading="lazy"/>
-        <figcaption>Company Information section — fill in your legal details here</figcaption>
-      </figure>
+        <!-- ─── TAB 1: COMPANY ─────────────────────────── -->
+        <div class="doc-section">
+          <h2>Company tab</h2>
+          <p>The Company tab controls the details that print on every invoice, quotation, and receipt.</p>
 
-      <table class="docs-table">
-        <thead><tr><th>Field</th><th>What to enter</th><th>Required?</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Company Name</strong></td><td>Your full legal business name (appears on invoice header)</td><td>Yes</td></tr>
-          <tr><td><strong>VAT Registration No.</strong></td><td>15-digit ZATCA VAT number (e.g. 300012345600003)</td><td>For VAT invoices</td></tr>
-          <tr><td><strong>CR No.</strong></td><td>Commercial Registration number (e.g. 1010XXXXXXXX)</td><td>Recommended</td></tr>
-          <tr><td><strong>Phone</strong></td><td>Business phone number printed on documents</td><td>No</td></tr>
-          <tr><td><strong>Email</strong></td><td>Business email shown on invoices</td><td>No</td></tr>
-          <tr><td><strong>Address</strong></td><td>Street, city, country — printed in the invoice header</td><td>No</td></tr>
-          <tr><td><strong>Default Currency</strong></td><td>SAR, AED, KWD, etc. — applies to all new transactions</td><td>Yes</td></tr>
-        </tbody>
-      </table>
+          <h3>Company Information</h3>
+          <p>Fill in your legal business details. These appear on every printed document and in the ZATCA QR code:</p>
 
-      <div class="callout callout-warning">
-        <strong>Currency change:</strong> Changing the default currency takes effect from your <em>next login</em>. Existing transactions keep their original currency.
-      </div>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <h4>Company Name</h4>
+                <p>Your full legal name as registered with ZATCA and CR (e.g. <em>Al Noor Trading Co. Ltd.</em>). This appears in the invoice header.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <h4>VAT Registration No.</h4>
+                <p>Your 15-digit ZATCA VAT number (e.g. <em>300012345600003</em>). Required to print tax invoices and generate ZATCA QR codes.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <h4>CR No. (Commercial Registration)</h4>
+                <p>Your 10-digit CR number (e.g. <em>1010XXXXXXXX</em>). Shown on printed documents for legal reference.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <h4>Phone &amp; Email</h4>
+                <p>Your business contact details printed on invoices so customers can reach you easily.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">5</div>
+              <div class="step-content">
+                <h4>Address</h4>
+                <p>Street, city, and country. Printed in the invoice header. Required for ZATCA Phase 2 compliance.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">6</div>
+              <div class="step-content">
+                <h4>Default Currency</h4>
+                <p>Choose SAR, AED, KWD, or another GCC currency. This is pre-filled on all new invoices. <strong>Note:</strong> the change takes effect from your next login.</p>
+              </div>
+            </div>
+          </div>
 
-      <h3>Logo &amp; Branding</h3>
-      <figure class="screenshot-frame">
-        <img src="assets/img/screens/s01b-settings-logo.jpg" alt="Logo and Branding section" loading="lazy"/>
-        <figcaption>Logo &amp; Branding — upload your company logo for printed documents</figcaption>
-      </figure>
+          <h3>Logo &amp; Branding</h3>
+          <p>Upload your company logo to print on invoices, quotations, and orders:</p>
 
-      <p>Upload your company logo to have it appear on all printed invoices and quotations.</p>
+          <div class="screenshot">
+            <div class="ss-bar">
+              <div class="ss-dot" style="background:#fe5f57"></div>
+              <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+              <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+              <div class="ss-url">yourcompany.fateherp.com</div>
+            </div>
+            <img class="ss-img" src="assets/img/screens/s01b-settings-logo.jpg" alt="Logo and Branding upload section"/>
+            <div class="ss-caption">Logo &amp; Branding — drag and drop or click to upload, then choose the print size</div>
+          </div>
 
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-body">
-            <strong>Click the upload area</strong> or drag-and-drop your logo file. Accepted formats: PNG, SVG, or JPEG.
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <h4>Click the upload area</h4>
+                <p>Drag your logo file onto the dashed box or click to browse. Accepted formats: <strong>PNG, SVG, or JPEG</strong>. Keep the file under 800 KB for fast rendering on print.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <h4>Choose Logo Size on Print</h4>
+                <p>Select <strong>Small</strong> (40 px), <strong>Medium</strong> (65 px), or <strong>Large</strong> (90 px) to control how large the logo appears on printed documents.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <h4>Click Save Settings</h4>
+                <p>The blue <strong>Save Settings</strong> button is in the top-right corner of the page. Your logo will appear on the next document you print.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-body">
-            <strong>Keep the file under 800 KB</strong> for fast rendering on printed documents and receipts.
+
+        <!-- ─── TAB 2: INVOICE & STOCK ──────────────────── -->
+        <div class="doc-section">
+          <h2>Invoice &amp; Stock tab</h2>
+          <p>Controls how your invoices interact with inventory and what happens when stock runs low.</p>
+
+          <div class="screenshot">
+            <div class="ss-bar">
+              <div class="ss-dot" style="background:#fe5f57"></div>
+              <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+              <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+              <div class="ss-url">yourcompany.fateherp.com</div>
+            </div>
+            <img class="ss-img" src="assets/img/screens/s02-settings-invoice.jpg" alt="Invoice and Stock settings tab"/>
+            <div class="ss-caption">Invoice &amp; Stock — control how invoices affect your inventory</div>
+          </div>
+
+          <table class="data-table">
+            <thead><tr><th>Setting</th><th>What it does</th><th>Recommended for</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Update Stock on Invoice</strong></td>
+                <td>When ON, saving a Sales Invoice automatically deducts items from your warehouse stock. When OFF, you must create a separate Delivery Note to move stock.</td>
+                <td>Retail &amp; service businesses — turn ON</td>
+              </tr>
+              <tr>
+                <td><strong>Default Warehouse</strong></td>
+                <td>The warehouse items are deducted from when creating invoices. You can still override this on each individual invoice.</td>
+                <td>Set to your main store or stockroom</td>
+              </tr>
+              <tr>
+                <td><strong>Allow Negative Stock</strong></td>
+                <td>When ON, you can invoice an item even if the stock balance would go below zero. When OFF, Fateh will block the invoice.</td>
+                <td>Turn OFF for strict stock control; ON for service businesses</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="callout callout-info">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div><strong>VAT Account Setup:</strong> This tab has a <em>"Setup VAT Accounts"</em> button. Click it <strong>once</strong> when you first set up Fateh — it auto-creates the input and output tax accounts in your Chart of Accounts. You only need to do this once.</div>
           </div>
         </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-body">
-            <strong>Choose Logo Size on Print:</strong> Small (40px), Medium (65px), or Large (90px) — this controls how large the logo appears on the printed page.
+
+        <!-- ─── TAB 3: PRINT TEMPLATES ──────────────────── -->
+        <div class="doc-section">
+          <h2>Print Templates tab</h2>
+          <p>Choose how your printed invoices, quotations, and sales orders look. Two styles are available:</p>
+
+          <div class="screenshot">
+            <div class="ss-bar">
+              <div class="ss-dot" style="background:#fe5f57"></div>
+              <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+              <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+              <div class="ss-url">yourcompany.fateherp.com</div>
+            </div>
+            <img class="ss-img" src="assets/img/screens/s03-settings-print.jpg" alt="Print Templates tab showing Professional and Compact options"/>
+            <div class="ss-caption">Print Templates — choose between Professional (colour) and Compact (mono) for each document type</div>
+          </div>
+
+          <table class="data-table">
+            <thead><tr><th>Template</th><th>Best for</th><th>Features</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>🎨 <strong>Professional</strong></td>
+                <td>Client-facing invoices, formal quotes</td>
+                <td>Full colour, Fateh blue branding, ZATCA-style tax layout, logo prominently placed</td>
+              </tr>
+              <tr>
+                <td>🖨️ <strong>Compact</strong></td>
+                <td>B&amp;W printing, thermal printers, low-ink environments</td>
+                <td>Monospace font, minimal colour, smaller file size</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>You set a template independently for each of the three document types:</p>
+          <ul>
+            <li><strong>Sales Invoice</strong> — printed or emailed customer invoice</li>
+            <li><strong>Sales Order</strong> — order confirmation sent to customers</li>
+            <li><strong>Quotation</strong> — price quote before the customer confirms</li>
+          </ul>
+
+          <div class="callout callout-info">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div>Click <strong>Preview</strong> next to any template card to see a sample document before you commit to a choice.</div>
           </div>
         </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <div class="step-body">
-            <strong>Click Save Settings</strong> at the bottom of the page.
+
+        <!-- ─── TAB 4: POS RECEIPT ──────────────────────── -->
+        <div class="doc-section">
+          <h2>POS Receipt tab</h2>
+          <p>Set up the header, footer, and paper width for receipts printed at the Point of Sale counter.</p>
+
+          <div class="screenshot">
+            <div class="ss-bar">
+              <div class="ss-dot" style="background:#fe5f57"></div>
+              <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+              <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+              <div class="ss-url">yourcompany.fateherp.com</div>
+            </div>
+            <img class="ss-img" src="assets/img/screens/s04-settings-pos.jpg" alt="POS Receipt tab with header, footer, and paper width options"/>
+            <div class="ss-caption">POS Receipt — customise every receipt your cashier prints</div>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <h4>Receipt Header</h4>
+                <p>Text printed at the top of every receipt — use it for your shop name, branch, or a welcome message. Example: <em>"Welcome to Fateh Store — Al Riyadh"</em>.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <h4>Receipt Footer</h4>
+                <p>Text at the bottom — return policy, WhatsApp number, Wi-Fi code. Example: <em>"No refunds after 7 days. WhatsApp: +966 5X XXX XXXX"</em>.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <h4>Paper Width</h4>
+                <p>Choose <strong>80mm</strong> for a standard thermal till roll, or <strong>A4</strong> for a regular inkjet or laser printer.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <h4>Show VAT Breakdown</h4>
+                <p>When enabled, the receipt prints a separate line showing the VAT amount. Required for tax invoices above SAR 1,000.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">5</div>
+              <div class="step-content">
+                <h4>Preview &amp; Save</h4>
+                <p>Click <strong>Preview Receipt</strong> to see how it will look on your printer, then click <strong>Save Settings</strong>.</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- ─── TAB 2: INVOICE & STOCK ────────────────────── -->
-      <h2 id="invoice-stock" class="section-heading">Tab 2 — Invoice &amp; Stock</h2>
-      <p>Controls how invoices interact with your stock (inventory) and what happens when stock runs out.</p>
+        <!-- ─── TAB 5: CATEGORIES ───────────────────────── -->
+        <div class="doc-section">
+          <h2>Categories tab</h2>
+          <p>Item categories are groups you assign to products and services. On the POS screen they appear as filter buttons, making it faster for cashiers to find items during a sale.</p>
 
-      <figure class="screenshot-frame">
-        <img src="assets/img/screens/s02-settings-invoice.jpg" alt="Invoice and Stock settings" loading="lazy"/>
-        <figcaption>Invoice &amp; Stock tab — control stock deduction and warehouse defaults</figcaption>
-      </figure>
+          <div class="screenshot">
+            <div class="ss-bar">
+              <div class="ss-dot" style="background:#fe5f57"></div>
+              <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+              <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+              <div class="ss-url">yourcompany.fateherp.com</div>
+            </div>
+            <img class="ss-img" src="assets/img/screens/s05-settings-categories.jpg" alt="Categories tab — list of item groups"/>
+            <div class="ss-caption">Categories tab — add item groups that will appear as filter buttons in the POS screen</div>
+          </div>
 
-      <table class="docs-table">
-        <thead><tr><th>Setting</th><th>What it does</th><th>Recommended</th></tr></thead>
-        <tbody>
-          <tr>
-            <td><strong>Update Stock on Invoice</strong></td>
-            <td>When enabled, saving a Sales Invoice automatically deducts the items from your stock balance. Disable if you handle deliveries separately.</td>
-            <td>Enable for simple retail/service businesses</td>
-          </tr>
-          <tr>
-            <td><strong>Default Warehouse</strong></td>
-            <td>The warehouse that items are issued from when you create an invoice. You can override this on individual invoices.</td>
-            <td>Set to your main store/warehouse</td>
-          </tr>
-          <tr>
-            <td><strong>Allow Negative Stock</strong></td>
-            <td>When enabled, you can invoice items even if the stock balance would go below zero. Useful for service businesses that track stock loosely.</td>
-            <td>Disable for strict stock control</td>
-          </tr>
-        </tbody>
-      </table>
+          <h3>Creating a category</h3>
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <h4>Type the category name</h4>
+                <p>Enter a short, clear name in the input at the top — e.g. <em>Electronics</em>, <em>Food &amp; Beverages</em>, <em>Services</em>, <em>Accessories</em>.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <h4>Click Add</h4>
+                <p>The category appears instantly in the list below and becomes available as an item group in the Items module.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <h4>Assign items to the category</h4>
+                <p>Go to <strong>Stock → Items</strong>, open each item, and set its <strong>Item Group</strong> to the new category. Those items will then appear under that filter in POS.</p>
+              </div>
+            </div>
+          </div>
 
-      <div class="callout callout-info">
-        <strong>VAT Account Setup:</strong> This tab also has a <em>"Setup VAT Accounts"</em> button. Click it once when you first set up your company — it automatically creates the input and output tax accounts in your chart of accounts. You only need to do this once.
-      </div>
-
-      <!-- ─── TAB 3: PRINT TEMPLATES ────────────────────── -->
-      <h2 id="print-templates" class="section-heading">Tab 3 — Print Templates</h2>
-      <p>Choose how your printed invoices, quotations, and sales orders look. Two template styles are available.</p>
-
-      <figure class="screenshot-frame">
-        <img src="assets/img/screens/s03-settings-print.jpg" alt="Print Templates settings" loading="lazy"/>
-        <figcaption>Print Templates — choose a layout for each document type</figcaption>
-      </figure>
-
-      <table class="docs-table">
-        <thead><tr><th>Template</th><th>Best for</th><th>Features</th></tr></thead>
-        <tbody>
-          <tr>
-            <td><strong>Professional</strong> 🎨</td>
-            <td>Client-facing documents, formal invoices</td>
-            <td>Full colour, blue Fateh branding, ZATCA-style tax layout, logo prominently placed</td>
-          </tr>
-          <tr>
-            <td><strong>Compact</strong> 🖨️</td>
-            <td>Black &amp; white printing, thermal printers</td>
-            <td>Monospace font, minimal colour, smaller file size, prints faster</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>You can select a different template for each document type:</p>
-      <ul class="docs-list">
-        <li><strong>Sales Invoice</strong> — the template used when you print or email a customer invoice</li>
-        <li><strong>Sales Order</strong> — the template used for order confirmations</li>
-        <li><strong>Quotation</strong> — the template used for price quotes sent to customers</li>
-      </ul>
-
-      <div class="callout callout-tip">
-        <strong>Tip:</strong> Click <strong>Preview</strong> next to any template card to see how a sample document will look before committing to a choice.
-      </div>
-
-      <!-- ─── TAB 4: POS RECEIPT ─────────────────────────── -->
-      <h2 id="pos-receipt" class="section-heading">Tab 4 — POS Receipt</h2>
-      <p>Customise the thermal or A4 receipt that prints when you complete a Point of Sale transaction.</p>
-
-      <figure class="screenshot-frame">
-        <img src="assets/img/screens/s04-settings-pos.jpg" alt="POS Receipt settings" loading="lazy"/>
-        <figcaption>POS Receipt tab — set up your receipt header, footer, and paper width</figcaption>
-      </figure>
-
-      <table class="docs-table">
-        <thead><tr><th>Setting</th><th>What it does</th></tr></thead>
-        <tbody>
-          <tr>
-            <td><strong>Receipt Header</strong></td>
-            <td>Text that appears at the top of every POS receipt. Use it for a greeting, shop tagline, or branch name (e.g. "Thank you for shopping at Al Noor Store!").</td>
-          </tr>
-          <tr>
-            <td><strong>Receipt Footer</strong></td>
-            <td>Text at the bottom of the receipt. Common use: return policy, Wi-Fi password, or social media handle.</td>
-          </tr>
-          <tr>
-            <td><strong>Paper Width</strong></td>
-            <td><strong>80mm</strong> — standard thermal till roll. <strong>A4</strong> — for inkjet/laser printers or PDF receipts.</td>
-          </tr>
-          <tr>
-            <td><strong>Show VAT Breakdown</strong></td>
-            <td>When enabled, prints a line showing the VAT amount separately (required for tax invoices above SAR 1,000).</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-body">Type your <strong>Header</strong> text — e.g. "Welcome to Fateh Store | فتح ستور"</div>
+          <div class="callout callout-warning">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <div><strong>Deleting a category:</strong> Click the trash icon next to a category. If items are still assigned to it, Fateh will block the deletion and show how many items are affected — reassign those items to another group first.</div>
+          </div>
         </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-body">Type your <strong>Footer</strong> text — e.g. "No returns after 7 days. WhatsApp: +966 5X XXX XXXX"</div>
+
+        <!-- ─── TAB 6: DOCS ─────────────────────────────── -->
+        <div class="doc-section">
+          <h2>Docs tab</h2>
+          <p>The Docs tab is a built-in shortcut panel to this documentation site, so you can look things up without leaving the app.</p>
+
+          <div class="screenshot">
+            <div class="ss-bar">
+              <div class="ss-dot" style="background:#fe5f57"></div>
+              <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+              <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+              <div class="ss-url">yourcompany.fateherp.com</div>
+            </div>
+            <img class="ss-img" src="assets/img/screens/s06-settings-docs.jpg" alt="Docs tab showing quick-link cards to documentation sections"/>
+            <div class="ss-caption">Docs tab — click any card to open that section of the documentation in a new tab</div>
+          </div>
+
+          <p>Each card opens a different documentation section: Getting Started, Items, Sales, Purchasing, ZATCA, VAT, Accounting, and Reports. The <strong>Open Docs</strong> button at the bottom opens the full site at <a href="https://docs.fateherp.com" target="_blank">docs.fateherp.com</a>.</p>
         </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-body">Select <strong>80mm</strong> if you use a thermal printer, or <strong>A4</strong> for a regular printer.</div>
+
+        <!-- ─── SAVING ───────────────────────────────────── -->
+        <div class="doc-section">
+          <h2>Saving your settings</h2>
+          <p>After making changes on any tab, click the <strong>Save Settings</strong> button in the <strong>top-right corner</strong> of the page.</p>
+          <ul>
+            <li><strong>Categories</strong> save immediately when you click Add or the trash icon — no Save button needed.</li>
+            <li><strong>Currency change</strong> takes effect from your next login.</li>
+            <li>Settings are shared across your whole company — all users on your account will see the updated details.</li>
+          </ul>
         </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <div class="step-body">Click <strong>Preview Receipt</strong> to see a sample before saving.</div>
+
+        <!-- ─── PERMISSIONS ──────────────────────────────── -->
+        <div class="doc-section">
+          <h2>Who can change settings?</h2>
+          <table class="data-table">
+            <thead><tr><th>Role</th><th>Can open Settings?</th><th>Can save changes?</th></tr></thead>
+            <tbody>
+              <tr><td>Admin / Owner</td><td>✅ Yes</td><td>✅ Yes — full control over all tabs</td></tr>
+              <tr><td>Manager</td><td>✅ Yes</td><td>⚠️ Some sections only</td></tr>
+              <tr><td>Cashier / Staff</td><td>❌ No — Settings is hidden</td><td>❌ No</td></tr>
+            </tbody>
+          </table>
         </div>
-        <div class="step">
-          <div class="step-num">5</div>
-          <div class="step-body">Click <strong>Save Settings</strong>.</div>
-        </div>
-      </div>
 
-      <!-- ─── TAB 5: CATEGORIES ──────────────────────────── -->
-      <h2 id="categories" class="section-heading">Tab 5 — Categories</h2>
-      <p>Item categories are groups you assign to your products and services. They appear as filter buttons on the POS screen, making it faster to find items during a sale.</p>
-
-      <figure class="screenshot-frame">
-        <img src="assets/img/screens/s05-settings-categories.jpg" alt="Categories tab" loading="lazy"/>
-        <figcaption>Categories tab — create and manage item groups for the POS screen</figcaption>
-      </figure>
-
-      <h3>Create a Category</h3>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-body">Go to <strong>Settings → Categories</strong>.</div>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-body">Type the category name in the input field — e.g. <em>Electronics</em>, <em>Food &amp; Beverages</em>, <em>Services</em>.</div>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-body">Click <strong>Add</strong>. The new category appears in the list immediately.</div>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <div class="step-body">Go to each item (Items section) and assign it to this category using the <strong>Item Group</strong> field.</div>
-        </div>
-      </div>
-
-      <h3>Delete a Category</h3>
-      <p>Click the <strong>trash icon</strong> next to a category. If items are still assigned to that category, Fateh will warn you and prevent deletion — reassign those items first.</p>
-
-      <div class="callout callout-warning">
-        <strong>Note:</strong> Categories are shared between the POS screen and the Items module. Deleting a category that has items will fail — you must move those items to a different group first.
-      </div>
-
-      <!-- ─── TAB 6: DOCS ────────────────────────────────── -->
-      <h2 id="docs-tab" class="section-heading">Tab 6 — Docs</h2>
-      <p>The Docs tab is a quick-launch panel that links directly to this documentation site from within the app.</p>
-
-      <figure class="screenshot-frame">
-        <img src="assets/img/screens/s06-settings-docs.jpg" alt="Docs tab in Settings" loading="lazy"/>
-        <figcaption>Docs tab — quick links to every documentation section</figcaption>
-      </figure>
-
-      <p>Each card opens the relevant documentation page in a new browser tab:</p>
-      <ul class="docs-list">
-        <li><strong>Getting Started</strong> — login walkthrough and initial setup</li>
-        <li><strong>Items &amp; Inventory</strong> — adding products, services, and stock</li>
-        <li><strong>Sales &amp; Invoicing</strong> — customers, quotations, invoices</li>
-        <li><strong>Purchasing</strong> — suppliers and purchase invoices</li>
-        <li><strong>ZATCA e-Invoicing</strong> — Phase 2 compliance and QR codes</li>
-        <li><strong>VAT</strong> — tax setup and returns</li>
-        <li><strong>Accounting</strong> — chart of accounts, journal entries</li>
-        <li><strong>Reports</strong> — financial and sales reports</li>
-      </ul>
-      <p>Click <strong>Open Docs</strong> to open the full documentation site at <a href="https://docs.fateherp.com" target="_blank">docs.fateherp.com</a>.</p>
-
-      <!-- ─── SAVING SETTINGS ───────────────────────────── -->
-      <h2 id="saving" class="section-heading">Saving Your Settings</h2>
-      <p>After making changes on any tab (except Categories and Docs which save per action), click the <strong>Save Settings</strong> button in the top-right corner or at the bottom of the tab.</p>
-
-      <div class="callout callout-tip">
-        <strong>Auto-save:</strong> Settings are cached in your browser so they load instantly on next visit. They are also saved to the server so all users on the same company see the same settings.
-      </div>
-
-      <!-- ─── WHO CAN CHANGE SETTINGS ───────────────────── -->
-      <h2 id="permissions" class="section-heading">Who Can Change Settings?</h2>
-      <table class="docs-table">
-        <thead><tr><th>Role</th><th>Can access Settings?</th><th>Can save changes?</th></tr></thead>
-        <tbody>
-          <tr><td>Admin / Owner</td><td>✅ Yes</td><td>✅ Yes — full control</td></tr>
-          <tr><td>Manager</td><td>✅ Yes</td><td>⚠️ Some sections only</td></tr>
-          <tr><td>Cashier / Staff</td><td>❌ No</td><td>❌ No</td></tr>
-        </tbody>
-      </table>
-
-      <!-- ─── NEXT STEPS ─────────────────────────────────── -->
-      <div class="next-steps">
-        <h3>Related pages</h3>
-        <div class="next-grid">
-          <a href="items.html" class="next-card">
-            <span class="next-icon">📦</span>
-            <span class="next-label">Items</span>
-            <span class="next-desc">Add products and assign categories</span>
-          </a>
-          <a href="pos.html" class="next-card">
-            <span class="next-icon">🖥️</span>
-            <span class="next-label">Point of Sale</span>
-            <span class="next-desc">Use categories in POS</span>
-          </a>
-          <a href="vat.html" class="next-card">
-            <span class="next-icon">🧾</span>
-            <span class="next-label">VAT Setup</span>
-            <span class="next-desc">Configure VAT accounts</span>
-          </a>
-          <a href="zatca.html" class="next-card">
-            <span class="next-icon">📋</span>
-            <span class="next-label">ZATCA</span>
-            <span class="next-desc">Phase 2 e-invoicing</span>
-          </a>
-        </div>
-      </div>
-
+      </div><!-- /content-inner -->
     </main>
   </div>
 
