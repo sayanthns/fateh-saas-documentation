@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glossary — Fateh ERP Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/docs.css"/>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.png" alt="Fateh ERP" class="logo-img"/></a>
+    </div>
+    <div class="sidebar-search">
+      <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
+      <svg class="search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-group"><span class="nav-group-label">Getting Started</span>
+        <a href="index.html" class="nav-link">Welcome</a>
+        <a href="quickstart.html" class="nav-link">Quick Start</a>
+        <a href="first-login.html" class="nav-link">First Login</a>
+        <a href="navigation.html" class="nav-link">Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Sales</span>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <a href="quotations.html" class="nav-link">Quotations</a>
+        <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
+        <a href="payments.html" class="nav-link">Payments</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Purchasing</span>
+        <a href="suppliers.html" class="nav-link">Suppliers</a>
+        <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items</a>
+        <a href="stock.html" class="nav-link">Stock</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Compliance</span>
+        <a href="vat.html" class="nav-link">VAT</a>
+        <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Help</span>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
+        <a href="support.html" class="nav-link">Contact Support</a>
+      </div>
+    </nav>
+    <div class="sidebar-footer"><span class="sidebar-version">Fateh ERP v2.0</span></div>
+  </aside>
+  <div class="main-wrapper">
+    <header class="topbar">
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Help</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Glossary</span></div>
+      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+    </header>
+    <main class="content">
+      <div class="content-inner">
+
+        <div class="page-hero">
+          <h1>Glossary</h1>
+          <p>Definitions of key terms used in Fateh ERP and Saudi VAT compliance.</p>
+        </div>
+
+        <div class="doc-section">
+          <table class="doc-table">
+            <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Clearance</strong></td><td>ZATCA's real-time approval process for B2B invoices. An invoice must be cleared before it is legally valid.</td></tr>
+              <tr><td><strong>Credit Note</strong></td><td>A document that reduces the amount owed on a previous invoice. Used for refunds or corrections.</td></tr>
+              <tr><td><strong>Debit Note</strong></td><td>A document that increases the amount owed on a previous invoice.</td></tr>
+              <tr><td><strong>Doctype</strong></td><td>A type of document in Fateh ERP (e.g., Customer, Sales Invoice, Item). Each doctype has its own form and list view.</td></tr>
+              <tr><td><strong>GCC</strong></td><td>Gulf Cooperation Council — Saudi Arabia, UAE, Kuwait, Qatar, Bahrain, Oman.</td></tr>
+              <tr><td><strong>Grand Total</strong></td><td>The total amount of an invoice including VAT.</td></tr>
+              <tr><td><strong>Input VAT</strong></td><td>VAT you paid on purchases. This can be deducted from your output VAT when filing your VAT return.</td></tr>
+              <tr><td><strong>Net Total</strong></td><td>The total amount before VAT is added.</td></tr>
+              <tr><td><strong>Output VAT</strong></td><td>VAT you collected on sales. This is what you owe to ZATCA.</td></tr>
+              <tr><td><strong>Phase 2</strong></td><td>The Integration Phase of ZATCA's e-invoicing mandate. Requires real-time clearance and reporting via API.</td></tr>
+              <tr><td><strong>QR Code</strong></td><td>A scannable barcode on ZATCA invoices containing invoice details and seller VAT number.</td></tr>
+              <tr><td><strong>SAR</strong></td><td>Saudi Riyal — the currency for all VAT reporting in Saudi Arabia.</td></tr>
+              <tr><td><strong>Simplified Invoice</strong></td><td>A B2C invoice (to end consumers) that requires reporting but not clearance.</td></tr>
+              <tr><td><strong>Standard Invoice</strong></td><td>A B2B invoice (between VAT-registered entities) that requires real-time ZATCA clearance.</td></tr>
+              <tr><td><strong>Tax ID / VAT No.</strong></td><td>The 15-digit VAT registration number issued by ZATCA. Required on all B2B invoices.</td></tr>
+              <tr><td><strong>UBL 2.1</strong></td><td>Universal Business Language v2.1 — the XML standard ZATCA requires for e-invoices.</td></tr>
+              <tr><td><strong>UOM</strong></td><td>Unit of Measure (e.g., Nos, Kg, Box, Litre).</td></tr>
+              <tr><td><strong>VAT</strong></td><td>Value Added Tax — currently 15% in Saudi Arabia.</td></tr>
+              <tr><td><strong>ZATCA</strong></td><td>Zakat, Tax and Customs Authority — the Saudi tax authority responsible for VAT and e-invoicing.</td></tr>
+            </tbody>
+          </table>
+        </div>
+    
+      </div>
+      <div class="page-nav"><a href="faq.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>FAQ</span></a><a href="support.html" class="page-nav-next"><span>Contact Support</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+    </main>
+    <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="assets/js/docs.js"></script>
+</body>
+</html>

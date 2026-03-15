@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quotations — Fateh ERP Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/docs.css"/>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.png" alt="Fateh ERP" class="logo-img"/></a>
+    </div>
+    <div class="sidebar-search">
+      <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
+      <svg class="search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-group"><span class="nav-group-label">Getting Started</span>
+        <a href="index.html" class="nav-link">Welcome</a>
+        <a href="quickstart.html" class="nav-link">Quick Start</a>
+        <a href="first-login.html" class="nav-link">First Login</a>
+        <a href="navigation.html" class="nav-link">Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Sales</span>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <a href="quotations.html" class="nav-link">Quotations</a>
+        <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
+        <a href="payments.html" class="nav-link">Payments</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Purchasing</span>
+        <a href="suppliers.html" class="nav-link">Suppliers</a>
+        <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items</a>
+        <a href="stock.html" class="nav-link">Stock</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Compliance</span>
+        <a href="vat.html" class="nav-link">VAT</a>
+        <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Help</span>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
+        <a href="support.html" class="nav-link">Contact Support</a>
+      </div>
+    </nav>
+    <div class="sidebar-footer"><span class="sidebar-version">Fateh ERP v2.0</span></div>
+  </aside>
+  <div class="main-wrapper">
+    <header class="topbar">
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Sales</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Quotations</span></div>
+      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+    </header>
+    <main class="content">
+      <div class="content-inner">
+
+        <div class="page-hero">
+          <h1>Quotations</h1>
+          <p>Send professional quotations to customers and convert them to Sales Orders or Sales Invoices with one click.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Creating a Quotation</h2>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-content">
+              <h4>Go to Selling → Quotation</h4>
+              <p>Click <strong>New Quotation</strong>.</p>
+            </div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content">
+              <h4>Select the customer</h4>
+              <p>In the <strong>Customer</strong> field, type and select the customer name. Their address and contact are auto-filled.</p>
+            </div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content">
+              <h4>Set validity date</h4>
+              <p>Set the <strong>Valid Till</strong> date — this is when the quote expires.</p>
+            </div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content">
+              <h4>Add items</h4>
+              <p>In the <strong>Items</strong> table, click <strong>Add Row</strong>. Select each item, quantity, and confirm the rate. VAT is calculated automatically.</p>
+            </div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-content">
+              <h4>Submit</h4>
+              <p>Click <strong>Submit</strong>. The quotation is now locked and can be sent to the customer (PDF button in the toolbar).</p>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <h2>Converting to Invoice or Sales Order</h2>
+          <p>Once the customer accepts the quote:</p>
+          <ul>
+            <li>Open the Quotation</li>
+            <li>Click the <strong>Make</strong> button in the top toolbar</li>
+            <li>Choose <strong>Sales Order</strong> (for orders to be fulfilled later) or <strong>Sales Invoice</strong> (to invoice immediately)</li>
+          </ul>
+          <p>All items and amounts are copied over automatically.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Quotation Statuses</h2>
+          <table class="doc-table">
+            <thead><tr><th>Status</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td>Draft</td><td>Not submitted — still editable</td></tr>
+              <tr><td>Open</td><td>Submitted, awaiting customer response</td></tr>
+              <tr><td>Ordered</td><td>Converted to Sales Order</td></tr>
+              <tr><td>Lost</td><td>Customer declined — mark as Lost with a reason</td></tr>
+              <tr><td>Cancelled</td><td>Cancelled by you</td></tr>
+            </tbody>
+          </table>
+        </div>
+    
+      </div>
+      <div class="page-nav"><a href="customers.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Customers</span></a><a href="sales-invoices.html" class="page-nav-next"><span>Sales Invoices</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+    </main>
+    <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="assets/js/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ — Fateh ERP Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/docs.css"/>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.png" alt="Fateh ERP" class="logo-img"/></a>
+    </div>
+    <div class="sidebar-search">
+      <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
+      <svg class="search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-group"><span class="nav-group-label">Getting Started</span>
+        <a href="index.html" class="nav-link">Welcome</a>
+        <a href="quickstart.html" class="nav-link">Quick Start</a>
+        <a href="first-login.html" class="nav-link">First Login</a>
+        <a href="navigation.html" class="nav-link">Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Sales</span>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <a href="quotations.html" class="nav-link">Quotations</a>
+        <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
+        <a href="payments.html" class="nav-link">Payments</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Purchasing</span>
+        <a href="suppliers.html" class="nav-link">Suppliers</a>
+        <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items</a>
+        <a href="stock.html" class="nav-link">Stock</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Compliance</span>
+        <a href="vat.html" class="nav-link">VAT</a>
+        <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Help</span>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
+        <a href="support.html" class="nav-link">Contact Support</a>
+      </div>
+    </nav>
+    <div class="sidebar-footer"><span class="sidebar-version">Fateh ERP v2.0</span></div>
+  </aside>
+  <div class="main-wrapper">
+    <header class="topbar">
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Help</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">FAQ</span></div>
+      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+    </header>
+    <main class="content">
+      <div class="content-inner">
+
+        <div class="page-hero">
+          <h1>Frequently Asked Questions</h1>
+          <p>Common questions from Fateh ERP users.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Account & Login</h2>
+
+          <h3>I forgot my password. How do I reset it?</h3>
+          <p>On the login page, click <strong>Forgot Password</strong>, enter your email, and follow the link in the reset email. If you don't receive it, check your spam folder or contact <a href="mailto:support@fateherp.com">support@fateherp.com</a>.</p>
+
+          <h3>Can multiple users log in at the same time?</h3>
+          <p>Yes. Fateh ERP supports multiple concurrent users. Each user has their own login and can be assigned different roles (e.g., Accounts Manager, Sales User) to restrict what they can see and do.</p>
+
+          <h3>How do I add a new user?</h3>
+          <p>Go to <strong>Settings → Users → New User</strong>. Enter the new user's email, assign a role, and click <strong>Send Welcome Email</strong>. They'll receive login instructions by email.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Invoicing & ZATCA</h2>
+
+          <h3>Can I edit an invoice after submitting it?</h3>
+          <p>No. Once submitted, a Sales Invoice is legally binding and locked. If you made a mistake, you need to issue a <strong>Credit Note</strong> to reverse the original invoice, then create a corrected invoice.</p>
+
+          <h3>My ZATCA submission failed. What do I do?</h3>
+          <p>Check the error message on the invoice in the ZATCA section. Common fixes include adding the customer's VAT number for B2B invoices or correcting the address. Then cancel the invoice, fix the customer or item data, and create a new invoice.</p>
+
+          <h3>Does Fateh ERP support credit notes?</h3>
+          <p>Yes. Open the original Sales Invoice and click <strong>Make → Return / Credit Note</strong>. Adjust the quantities and amounts as needed and submit.</p>
+
+          <h3>Can I issue invoices in USD or another currency?</h3>
+          <p>Yes. On the Sales Invoice, change the <strong>Currency</strong> field. The VAT will still be calculated and reported in SAR as required by ZATCA.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Stock & Items</h2>
+
+          <h3>My item stock is showing negative. How do I fix it?</h3>
+          <p>A negative stock usually means you sold or issued more items than you had. Do a <strong>Stock Reconciliation</strong> (Stock → Stock Reconciliation) to set the correct quantities.</p>
+
+          <h3>Can I sell a service without tracking stock?</h3>
+          <p>Yes. Create the item with <strong>Maintain Stock = No</strong>. It will appear on invoices but won't affect warehouse stock levels.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Data & Backups</h2>
+
+          <h3>How is my data backed up?</h3>
+          <p>Fateh ERP performs automatic daily backups. All data is stored securely in the cloud. You can also download a manual backup anytime from <strong>Settings → Backups → Download Latest Backup</strong>.</p>
+
+          <h3>Can I import my existing data from Excel?</h3>
+          <p>Yes. Fateh ERP supports data import for Customers, Suppliers, Items, and more. Go to <strong>Settings → Data Import</strong>, download the template for the doctype you want, fill it in, and upload.</p>
+        </div>
+    
+      </div>
+      <div class="page-nav"><a href="reports-sales.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Sales Reports</span></a><a href="glossary.html" class="page-nav-next"><span>Glossary</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+    </main>
+    <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="assets/js/docs.js"></script>
+</body>
+</html>

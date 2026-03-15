@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sales Reports — Fateh ERP Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/docs.css"/>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg"/>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.png" alt="Fateh ERP" class="logo-img"/></a>
+    </div>
+    <div class="sidebar-search">
+      <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
+      <svg class="search-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-group"><span class="nav-group-label">Getting Started</span>
+        <a href="index.html" class="nav-link">Welcome</a>
+        <a href="quickstart.html" class="nav-link">Quick Start</a>
+        <a href="first-login.html" class="nav-link">First Login</a>
+        <a href="navigation.html" class="nav-link">Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Sales</span>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <a href="quotations.html" class="nav-link">Quotations</a>
+        <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
+        <a href="payments.html" class="nav-link">Payments</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Purchasing</span>
+        <a href="suppliers.html" class="nav-link">Suppliers</a>
+        <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items</a>
+        <a href="stock.html" class="nav-link">Stock</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Compliance</span>
+        <a href="vat.html" class="nav-link">VAT</a>
+        <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Help</span>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
+        <a href="support.html" class="nav-link">Contact Support</a>
+      </div>
+    </nav>
+    <div class="sidebar-footer"><span class="sidebar-version">Fateh ERP v2.0</span></div>
+  </aside>
+  <div class="main-wrapper">
+    <header class="topbar">
+      <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Reports</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Sales Reports</span></div>
+      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+    </header>
+    <main class="content">
+      <div class="content-inner">
+
+        <div class="page-hero">
+          <h1>Sales Reports</h1>
+          <p>Analyze your sales performance, top customers, and best-selling items.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Sales Analytics</h2>
+          <p>Go to <strong>Selling → Reports → Sales Analytics</strong>. This is the most powerful sales report in Fateh ERP. You can:</p>
+          <ul>
+            <li>Group by <strong>Customer</strong>, <strong>Item</strong>, <strong>Territory</strong>, or <strong>Sales Person</strong></li>
+            <li>View by <strong>Monthly</strong>, <strong>Quarterly</strong>, or <strong>Yearly</strong></li>
+            <li>Compare periods side-by-side</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2>Sales Invoice Trends</h2>
+          <p>Go to <strong>Accounts → Reports → Sales Invoice Trends</strong>. Shows total invoiced amount per month with a trend chart. Useful for spotting seasonal patterns.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Customer-wise Sales History</h2>
+          <p>Go to <strong>Selling → Reports → Customer-wise Sales History</strong>. See all invoices for each customer with totals. Use this to identify your top customers and track their buying behaviour over time.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Item-wise Sales History</h2>
+          <p>Go to <strong>Selling → Reports → Item-wise Sales History</strong>. See how many units of each item you've sold and the total revenue per item.</p>
+        </div>
+    
+      </div>
+      <div class="page-nav"><a href="reports-ar.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Accounts Receivable</span></a><a href="faq.html" class="page-nav-next"><span>FAQ</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+    </main>
+    <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
+  </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <script src="assets/js/docs.js"></script>
+</body>
+</html>
