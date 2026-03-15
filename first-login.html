@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,27 +24,42 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -52,7 +68,13 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Getting Started</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">First Login</span></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Getting Started</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">First Login</span>
+      </div>
       <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
@@ -60,68 +82,76 @@
 
         <div class="page-hero">
           <h1>First Login</h1>
-          <p>When your Fateh ERP account is ready, you'll receive a welcome email with your login link. Here's how to sign in for the first time.</p>
+          <p>How to sign in to Fateh ERP for the first time and get familiar with the login screen.</p>
+        </div>
+
+        <div class="callout callout-success"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><div>You'll need the URL to your Fateh ERP site and the credentials your administrator sent you. The URL looks like <strong>yourcompany.fateherp.com</strong>.</div></div>
+
+        <div class="doc-section">
+          <h2>Opening the login page</h2>
+          <p>Open your browser and go to your Fateh ERP URL. You'll land on the login screen:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/01-login.jpg" alt="Login screen — enter your email and password"/>
+  <div class="ss-caption">Login screen — enter your email and password</div>
+</div>
+          <p>The login page is clean and simple. It has two fields:</p>
+          <ul>
+            <li><strong>Email / Username</strong> — use the email address or username your administrator gave you</li>
+            <li><strong>Password</strong> — the password from your welcome email (you'll be prompted to change it on first sign-in)</li>
+          </ul>
         </div>
 
         <div class="doc-section">
-          <h2>Step 1 — Open the login page</h2>
-          <p>Click the link in your welcome email, or go directly to <strong>yourcompany.fateherp.com</strong> in your browser.</p>
-        <div class="screenshot">
-          <div class="ss-bar">
-            <div class="ss-dot" style="background:#fe5f57"></div>
-            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
-            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
-            <div class="ss-url">yourcompany.fateherp.com</div>
+          <h2>Signing in</h2>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Enter your email or username</h4><p>Type the email address or username provided by your system administrator. For most setups this is your work email.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Enter your password</h4><p>Type the temporary password from the welcome email. Passwords are case-sensitive.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Click Sign In</h4><p>Press the <strong>Sign In</strong> button or hit Enter. Fateh ERP will verify your credentials.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Change your password (first time only)</h4><p>On your very first login you'll be asked to set a new, permanent password. Choose something secure and note it down.</p></div></div>
           </div>
-          <img class="ss-img" src="assets/img/screens/01-login.jpg" alt="The Fateh ERP login screen"/>
-          <div class="ss-caption">The Fateh ERP login screen</div>
-        </div>
-        </div>
-
-        <div class="doc-section">
-          <h2>Step 2 — Enter your email and password</h2>
-          <p>Type the <strong>email address</strong> and <strong>password</strong> from your welcome email, then click <strong>Sign in</strong>.</p>
-          <div class="callout callout-info">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            <div>First time logging in? Your temporary password is in the welcome email. You can change it anytime from your profile settings.</div>
-          </div>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/01b-login-filled.jpg" alt="Login form with credentials entered — ready to sign in"/>
+  <div class="ss-caption">Login form with credentials entered — ready to sign in</div>
+</div>
         </div>
 
         <div class="doc-section">
-          <h2>Step 3 — You're in!</h2>
-          <p>After signing in you'll land on the <strong>Dashboard</strong>, which shows your business at a glance.</p>
-        <div class="screenshot">
-          <div class="ss-bar">
-            <div class="ss-dot" style="background:#fe5f57"></div>
-            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
-            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
-            <div class="ss-url">yourcompany.fateherp.com</div>
-          </div>
-          <img class="ss-img" src="assets/img/screens/02-dashboard.jpg" alt="Your Dashboard after signing in — shows today's sales, collections, and totals"/>
-          <div class="ss-caption">Your Dashboard after signing in — shows today's sales, collections, and totals</div>
-        </div>
-        </div>
-
-        <div class="doc-section">
-          <h2>The left menu</h2>
-          <p>Everything you need is in the sidebar on the left:</p>
-          <table class="doc-table">
-            <thead><tr><th>Section</th><th>What's inside</th></tr></thead>
-            <tbody>
-              <tr><td><strong>Sales</strong></td><td>Dashboard, Invoices, POS, Orders, Quotations, Customers, Payments, Items</td></tr>
-              <tr><td><strong>Purchase</strong></td><td>Purchase Invoice, Suppliers, Supplier Payments</td></tr>
-              <tr><td><strong>Accounting</strong></td><td>Journal Entry, Chart of Accounts, Expense Entry</td></tr>
-            </tbody>
-          </table>
+          <h2>After login — the Dashboard</h2>
+          <p>Once signed in you land on the Dashboard. This is your home base in Fateh ERP:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/02-dashboard.jpg" alt="Dashboard — your central overview after signing in"/>
+  <div class="ss-caption">Dashboard — your central overview after signing in</div>
+</div>
+          <p>The dashboard shows:</p>
+          <ul>
+            <li><strong>Summary cards</strong> — quick totals for unpaid invoices, overdue amounts, and this month's sales</li>
+            <li><strong>Left sidebar</strong> — the main navigation menu to access every module</li>
+            <li><strong>Recent activity</strong> — the latest transactions created in the system</li>
+          </ul>
         </div>
 
-        <div class="doc-section">
-          <h2>Forgot your password?</h2>
-          <p>On the login screen, click <strong>Forgot password?</strong> and enter your email. You'll receive a reset link within a few minutes. Check your spam folder if you don't see it.</p>
-        </div>
+        <div class="callout callout-info"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div>If you see a blank screen or get a 404 after login, clear your browser cache and try again. If the problem persists contact your administrator.</div></div>
 
       </div>
-      <div class="page-nav"><a href="quickstart.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Quick Start</span></a><a href="navigation.html" class="page-nav-next"><span>Navigation</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="quickstart.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Quick Start</span></a><a href="navigation.html" class="page-nav-next"><span>Dashboard & Navigation</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

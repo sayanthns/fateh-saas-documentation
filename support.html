@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,27 +24,42 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -52,7 +68,13 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Help</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Contact Support</span></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Help</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">Contact Support</span>
+      </div>
       <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
@@ -60,37 +82,59 @@
 
         <div class="page-hero">
           <h1>Contact Support</h1>
-          <p>We're here to help. Reach us through any of the channels below.</p>
+          <p>Can't find the answer in the docs? Get in touch with the Fateh ERP team.</p>
         </div>
 
-        <div class="card-grid">
-          <div class="feature-card" style="cursor:default">
-            <div class="fc-icon" style="background:#EFF6FF;color:#1D4ED8">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div class="fc-content">
-              <h3>Email</h3>
-              <p><a href="mailto:support@fateherp.com">support@fateherp.com</a><br/>Response within 4 business hours.</p>
-            </div>
-          </div>
-          <div class="feature-card" style="cursor:default">
-            <div class="fc-icon" style="background:#F0FDF4;color:#16A34A">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </div>
-            <div class="fc-content">
-              <h3>In-App Chat</h3>
-              <p>Click the chat icon inside Fateh ERP. Available Sunday–Thursday, 9 AM–6 PM AST.</p>
-            </div>
-          </div>
+        <div class="doc-section">
+          <h2>Support channels</h2>
+          <table class="data-table">
+            <thead><tr><th>Channel</th><th>Best for</th><th>Hours</th></tr></thead>
+            <tbody>
+              <tr><td>📧 Email</td><td>Non-urgent issues, detailed questions, feature requests</td><td>Responded within 24 hours</td></tr>
+              <tr><td>📞 Phone / WhatsApp</td><td>Urgent production issues, data problems</td><td>Sun–Thu, 9 AM – 6 PM AST</td></tr>
+              <tr><td>💬 In-app chat</td><td>Quick questions while using the system</td><td>Business hours</td></tr>
+            </tbody>
+          </table>
         </div>
 
-        <div class="callout callout-info">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <div>When contacting support, please include your <strong>company name</strong>, the <strong>invoice number</strong> (if relevant), and a <strong>screenshot</strong> of any error. This helps us fix things faster.</div>
+        <div class="doc-section">
+          <h2>Before contacting support — checklist</h2>
+          <p>Help us help you faster by checking these first:</p>
+          <ul>
+            <li>Search this documentation (use the search box in the left sidebar)</li>
+            <li>Check the <a href="faq.html">FAQ</a> page for your question</li>
+            <li>Note the exact error message (take a screenshot)</li>
+            <li>Note the steps that led to the error</li>
+            <li>Note your browser and OS version</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2>What to include in your support request</h2>
+          <ul>
+            <li><strong>Company name</strong> and your Fateh ERP URL</li>
+            <li><strong>Document number</strong> (e.g., "Invoice SAL-INV-2025-00123")</li>
+            <li><strong>Screenshot</strong> of the error or unexpected behaviour</li>
+            <li><strong>What you expected</strong> vs. <strong>what happened</strong></li>
+          </ul>
+        </div>
+
+        <div class="callout callout-info"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div>For ZATCA rejection issues, always include the <strong>ZATCA error code</strong> shown on the invoice. This helps us resolve the issue much faster.</div></div>
+
+        <div class="doc-section">
+          <h2>Training &amp; onboarding</h2>
+          <p>The Enfono team offers live training sessions for new users. These cover:</p>
+          <ul>
+            <li>Guided walkthrough of your specific business workflow</li>
+            <li>Data migration assistance (importing customers, items, opening balances)</li>
+            <li>ZATCA Phase 2 setup and certification</li>
+            <li>Custom print format design</li>
+          </ul>
+          <p>Contact your account manager or email us to schedule a session.</p>
         </div>
 
       </div>
-      <div class="page-nav"><a href="faq.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>FAQ</span></a><div></div></div>
+<div class="page-nav"><a href="glossary.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Glossary</span></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

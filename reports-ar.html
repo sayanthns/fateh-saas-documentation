@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Accounts Receivable — Fateh ERP Docs</title>
+  <title>Accounts Receivable Report — Fateh ERP Docs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/docs.css"/>
@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,21 +24,29 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
-        <a href="stock.html" class="nav-link">Stock</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
@@ -59,51 +68,54 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Reports</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Accounts Receivable</span></div>
-      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Reports</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">Accounts Receivable</span>
+      </div>
+      <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
-          <h1>Accounts Receivable</h1>
-          <p>See which customers owe you money, how much, and how overdue their payments are.</p>
+          <h1>Accounts Receivable Report</h1>
+          <p>See exactly which customers owe you money and how long the debt has been outstanding.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Opening the Report</h2>
-          <p>Go to <strong>Accounts → Reports → Accounts Receivable</strong>. Set the <strong>As of Date</strong> (usually today) and click <strong>Refresh</strong>.</p>
+          <h2>Running the AR Ageing report</h2>
+          <p>Go to <strong>Reports → Accounts Receivable</strong> (or search "Accounts Receivable" in the top bar):</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Set the date</h4><p>Enter the date you want to see outstanding balances as of. Typically 'today'.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Filter by customer (optional)</h4><p>Leave blank to see all customers, or type a customer name to focus on one account.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Click Refresh</h4><p>The report loads with customers sorted by total outstanding.</p></div></div>
+          </div>
         </div>
 
         <div class="doc-section">
-          <h2>Reading the Report</h2>
-          <table class="doc-table">
+          <h2>Understanding the ageing buckets</h2>
+          <table class="data-table">
             <thead><tr><th>Column</th><th>Meaning</th></tr></thead>
             <tbody>
-              <tr><td>Customer</td><td>Customer name</td></tr>
-              <tr><td>Invoice No.</td><td>Sales Invoice number</td></tr>
-              <tr><td>Invoice Date</td><td>Date the invoice was issued</td></tr>
-              <tr><td>Due Date</td><td>When payment is due</td></tr>
-              <tr><td>Grand Total</td><td>Total invoice amount (inc. VAT)</td></tr>
-              <tr><td>Outstanding</td><td>Amount still unpaid</td></tr>
-              <tr><td>Age (Days)</td><td>How many days since the invoice date</td></tr>
-              <tr><td>0–30 / 30–60 / 60–90 / 90+</td><td>Aging buckets for analysis</td></tr>
+              <tr><td><strong>0–30 Days</strong></td><td>Invoices due within 30 days — current, no action yet</td></tr>
+              <tr><td><strong>31–60 Days</strong></td><td>Invoices 31–60 days overdue — send a reminder</td></tr>
+              <tr><td><strong>61–90 Days</strong></td><td>60–90 days overdue — escalate to collections</td></tr>
+              <tr><td><strong>90+ Days</strong></td><td>Over 90 days — serious overdue, consider legal action</td></tr>
+              <tr><td><strong>Total</strong></td><td>All outstanding amounts combined</td></tr>
             </tbody>
           </table>
         </div>
 
         <div class="doc-section">
-          <h2>Following Up on Overdue Invoices</h2>
-          <p>Filter the report by <strong>Overdue</strong> invoices to see only unpaid invoices past their due date. Click any invoice to open it and send a reminder from within Fateh ERP (Email button).</p>
+          <h2>Exporting for collections</h2>
+          <p>Click <strong>Export → Excel</strong> to download the ageing report. Share it with your collections team or accountant. The Excel file includes all invoice numbers and contact details for follow-up.</p>
         </div>
 
-        <div class="callout callout-info">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <div>Export this report to Excel monthly and share with your management team for cash flow tracking.</div>
-        </div>
-    
       </div>
-      <div class="page-nav"><a href="reports.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Reports Overview</span></a><a href="reports-sales.html" class="page-nav-next"><span>Sales Reports</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="reports.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Reports Overview</span></a><a href="reports-sales.html" class="page-nav-next"><span>Sales Reports</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

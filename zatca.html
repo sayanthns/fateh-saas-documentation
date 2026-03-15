@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ZATCA — Fateh ERP Docs</title>
+  <title>ZATCA e-Invoicing — Fateh ERP Docs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/docs.css"/>
@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,27 +24,42 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -52,7 +68,13 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Compliance</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">ZATCA (e-Invoicing)</span></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Compliance</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">ZATCA e-Invoicing</span>
+      </div>
       <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
@@ -60,61 +82,64 @@
 
         <div class="page-hero">
           <h1>ZATCA e-Invoicing</h1>
-          <p>Saudi Arabia requires all VAT-registered businesses to submit invoices electronically to ZATCA. Fateh ERP does this automatically when you submit an invoice.</p>
+          <p>Saudi Arabia's ZATCA mandates electronic invoicing for all VAT-registered businesses. Fateh ERP handles the entire process automatically.</p>
         </div>
 
-        <div class="callout callout-success">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          <div><strong>You don't need to do anything special.</strong> Just create and submit your invoices normally in Fateh ERP. The ZATCA submission, XML generation, digital signature, and QR code are all handled behind the scenes.</div>
-        </div>
+        <div class="callout callout-success"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><div>Fateh ERP is <strong>ZATCA Phase 2 certified</strong>. Every submitted sales invoice is automatically cleared or reported through the ZATCA portal. No separate e-invoicing software needed.</div></div>
 
         <div class="doc-section">
-          <h2>What happens when you submit an invoice</h2>
-          <div class="steps">
-            <div class="step"><div class="step-num">1</div><div class="step-content">
-              <h4>You click Submit</h4>
-              <p>Fateh locks the invoice and starts the ZATCA process automatically.</p>
-            </div></div>
-            <div class="step"><div class="step-num">2</div><div class="step-content">
-              <h4>Invoice is signed and sent</h4>
-              <p>Fateh generates the required XML format, signs it with your ZATCA certificate, and sends it to ZATCA's servers.</p>
-            </div></div>
-            <div class="step"><div class="step-num">3</div><div class="step-content">
-              <h4>ZATCA clears or reports it</h4>
-              <p>For B2B invoices (business customers), ZATCA responds within seconds with a <strong>Cleared</strong> status. For B2C invoices (individual customers), it's <strong>Reported</strong>.</p>
-            </div></div>
-            <div class="step"><div class="step-num">4</div><div class="step-content">
-              <h4>QR code is added to the invoice</h4>
-              <p>The printed invoice PDF includes a ZATCA QR code that customers and auditors can scan to verify the invoice.</p>
-            </div></div>
-          </div>
-        </div>
-
-        <div class="doc-section">
-          <h2>B2B vs B2C — what's the difference?</h2>
-          <table class="doc-table">
-            <thead><tr><th></th><th>B2B (business customer)</th><th>B2C (individual customer)</th></tr></thead>
+          <h2>What ZATCA requires</h2>
+          <p>ZATCA e-invoicing has two phases:</p>
+          <table class="data-table">
+            <thead><tr><th>Phase</th><th>Requirement</th><th>Status</th></tr></thead>
             <tbody>
-              <tr><td>VAT number required?</td><td>✅ Yes — customer's VAT no.</td><td>❌ Not required</td></tr>
-              <tr><td>ZATCA process</td><td>Clearance (real-time)</td><td>Reporting (within 24h)</td></tr>
-              <tr><td>Invoice type in Fateh</td><td>Credit Invoice</td><td>Cash Invoice or Credit Invoice</td></tr>
+              <tr><td><strong>Phase 1</strong> (Generation)</td><td>Issue structured electronic invoices with a QR code. No portal submission required.</td><td>Active since Dec 2021</td></tr>
+              <tr><td><strong>Phase 2</strong> (Integration)</td><td>Real-time or near-real-time submission to ZATCA portal for clearance or reporting.</td><td>Active — being rolled out by taxpayer size</td></tr>
             </tbody>
           </table>
         </div>
 
         <div class="doc-section">
-          <h2>What if my invoice fails ZATCA?</h2>
-          <p>If there's a problem, Fateh will show an error message on the invoice. The most common reasons are:</p>
-          <ul>
-            <li><strong>Missing VAT number</strong> — B2B invoices must have the customer's 15-digit VAT number. Add it to the customer record and try again.</li>
-            <li><strong>Wrong VAT number format</strong> — must be exactly 15 digits.</li>
-            <li><strong>Certificate issue</strong> — contact Fateh support at <a href="mailto:support@fateherp.com">support@fateherp.com</a>.</li>
-          </ul>
-          <p>To fix: cancel the failed invoice, correct the customer details, and create a new invoice.</p>
+          <h2>How Fateh handles ZATCA</h2>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>You create a sales invoice</h4><p>Fill in the customer, items, and VAT as normal — nothing special to do.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>You click Submit</h4><p>This is the trigger. Fateh generates the UBL 2.1 XML file required by ZATCA.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Clearance or Reporting</h4><p>For B2B invoices above SAR 1,000 Fateh requests <strong>clearance</strong> from ZATCA before the invoice is finalised. For B2C or smaller invoices it is <strong>reported</strong> within 24 hours.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Status shows on invoice</h4><p>The invoice shows <strong>Cleared</strong> or <strong>Reported</strong> with the ZATCA UUID and timestamp.</p></div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-content"><h4>QR code on print</h4><p>The printed invoice includes the ZATCA-mandated QR code encoding seller details, invoice details, and VAT amount.</p></div></div>
+          </div>
         </div>
 
+        <div class="doc-section">
+          <h2>Invoice types under ZATCA</h2>
+          <table class="data-table">
+            <thead><tr><th>Invoice Type</th><th>When to use</th><th>ZATCA process</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Tax Invoice</strong> (فاتورة ضريبية)</td><td>B2B sales — to any VAT-registered business</td><td>Clearance required</td></tr>
+              <tr><td><strong>Simplified Tax Invoice</strong></td><td>B2C sales — to individuals or non-VAT registered buyers</td><td>Reported within 24h</td></tr>
+              <tr><td><strong>Credit Note</strong></td><td>Reducing a previously issued invoice (returns, corrections)</td><td>Same flow as original invoice</td></tr>
+              <tr><td><strong>Debit Note</strong></td><td>Increasing a previously issued invoice (additional charges)</td><td>Same flow as original invoice</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-section">
+          <h2>ZATCA clearance status</h2>
+          <table class="data-table">
+            <thead><tr><th>Status</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td><span style="color:#22c55e;font-weight:600">Cleared</span></td><td>ZATCA has validated and accepted this invoice. You can share it with the customer.</td></tr>
+              <tr><td><span style="color:#3b82f6;font-weight:600">Reported</span></td><td>Invoice submitted to ZATCA. Applies to simplified (B2C) invoices.</td></tr>
+              <tr><td><span style="color:#f59e0b;font-weight:600">Pending</span></td><td>Submitted to ZATCA but response not yet received. Refresh after a few minutes.</td></tr>
+              <tr><td><span style="color:#ef4444;font-weight:600">Rejected</span></td><td>ZATCA found an error. Cancel the invoice, fix the issue, and re-submit.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-warning"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><div>Never share an invoice with a customer until it shows <strong>Cleared</strong> or <strong>Reported</strong> status. Sharing an uncleared B2B invoice is non-compliant.</div></div>
+
       </div>
-      <div class="page-nav"><a href="vat.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>VAT</span></a><a href="faq.html" class="page-nav-next"><span>FAQ</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="vat.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>VAT</span></a><a href="reports.html" class="page-nav-next"><span>Reports</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,21 +24,29 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
-        <a href="stock.html" class="nav-link">Stock</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
@@ -59,46 +68,95 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Help</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Glossary</span></div>
-      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Help</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">Glossary</span>
+      </div>
+      <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
           <h1>Glossary</h1>
-          <p>Definitions of key terms used in Fateh ERP and Saudi VAT compliance.</p>
+          <p>Plain-English definitions of accounting and ERP terms used throughout the Fateh ERP documentation.</p>
         </div>
 
         <div class="doc-section">
-          <table class="doc-table">
-            <thead><tr><th>Term</th><th>Definition</th></tr></thead>
-            <tbody>
-              <tr><td><strong>Clearance</strong></td><td>ZATCA's real-time approval process for B2B invoices. An invoice must be cleared before it is legally valid.</td></tr>
-              <tr><td><strong>Credit Note</strong></td><td>A document that reduces the amount owed on a previous invoice. Used for refunds or corrections.</td></tr>
-              <tr><td><strong>Debit Note</strong></td><td>A document that increases the amount owed on a previous invoice.</td></tr>
-              <tr><td><strong>Doctype</strong></td><td>A type of document in Fateh ERP (e.g., Customer, Sales Invoice, Item). Each doctype has its own form and list view.</td></tr>
-              <tr><td><strong>GCC</strong></td><td>Gulf Cooperation Council — Saudi Arabia, UAE, Kuwait, Qatar, Bahrain, Oman.</td></tr>
-              <tr><td><strong>Grand Total</strong></td><td>The total amount of an invoice including VAT.</td></tr>
-              <tr><td><strong>Input VAT</strong></td><td>VAT you paid on purchases. This can be deducted from your output VAT when filing your VAT return.</td></tr>
-              <tr><td><strong>Net Total</strong></td><td>The total amount before VAT is added.</td></tr>
-              <tr><td><strong>Output VAT</strong></td><td>VAT you collected on sales. This is what you owe to ZATCA.</td></tr>
-              <tr><td><strong>Phase 2</strong></td><td>The Integration Phase of ZATCA's e-invoicing mandate. Requires real-time clearance and reporting via API.</td></tr>
-              <tr><td><strong>QR Code</strong></td><td>A scannable barcode on ZATCA invoices containing invoice details and seller VAT number.</td></tr>
-              <tr><td><strong>SAR</strong></td><td>Saudi Riyal — the currency for all VAT reporting in Saudi Arabia.</td></tr>
-              <tr><td><strong>Simplified Invoice</strong></td><td>A B2C invoice (to end consumers) that requires reporting but not clearance.</td></tr>
-              <tr><td><strong>Standard Invoice</strong></td><td>A B2B invoice (between VAT-registered entities) that requires real-time ZATCA clearance.</td></tr>
-              <tr><td><strong>Tax ID / VAT No.</strong></td><td>The 15-digit VAT registration number issued by ZATCA. Required on all B2B invoices.</td></tr>
-              <tr><td><strong>UBL 2.1</strong></td><td>Universal Business Language v2.1 — the XML standard ZATCA requires for e-invoices.</td></tr>
-              <tr><td><strong>UOM</strong></td><td>Unit of Measure (e.g., Nos, Kg, Box, Litre).</td></tr>
-              <tr><td><strong>VAT</strong></td><td>Value Added Tax — currently 15% in Saudi Arabia.</td></tr>
-              <tr><td><strong>ZATCA</strong></td><td>Zakat, Tax and Customs Authority — the Saudi tax authority responsible for VAT and e-invoicing.</td></tr>
-            </tbody>
-          </table>
+          <dl class="glossary-list">
+            <dt>Accounts Payable (AP)</dt>
+            <dd>Money your company owes to suppliers for goods or services received but not yet paid for. Tracked as a liability on your balance sheet.</dd>
+
+            <dt>Accounts Receivable (AR)</dt>
+            <dd>Money owed to your company by customers for goods or services you've invoiced but not yet received payment for.</dd>
+
+            <dt>Chart of Accounts</dt>
+            <dd>The complete list of financial accounts used by your business, organised in a tree structure. Every financial transaction is recorded against one or more of these accounts.</dd>
+
+            <dt>Credit Note</dt>
+            <dd>A document that reduces the amount a customer owes you — used for returns, discounts applied after invoicing, or to correct overcharges.</dd>
+
+            <dt>Debit Note</dt>
+            <dd>A document that increases the amount a customer owes you — used when additional charges apply to a transaction that was already invoiced.</dd>
+
+            <dt>General Ledger (GL)</dt>
+            <dd>The master record of all financial transactions in chronological order. Every entry in Fateh ERP ultimately writes to the general ledger.</dd>
+
+            <dt>Input VAT</dt>
+            <dd>VAT you pay to your suppliers on purchases. You can claim this back from ZATCA when filing your VAT return, reducing your net VAT liability.</dd>
+
+            <dt>Invoice</dt>
+            <dd>A document requesting payment from a customer for goods or services. In Fateh ERP, once submitted, invoices are locked and sent to ZATCA automatically.</dd>
+
+            <dt>Item</dt>
+            <dd>A product or service that you buy or sell. Items form the line entries on invoices, quotations, and purchase orders.</dd>
+
+            <dt>Journal Entry</dt>
+            <dd>A manual accounting entry that records a transaction directly against specific accounts. Used for transactions that don't go through the invoice workflow (e.g., depreciation, bank charges).</dd>
+
+            <dt>Output VAT</dt>
+            <dd>VAT you charge your customers on sales. You collect this on behalf of ZATCA and pay it to them in your VAT return.</dd>
+
+            <dt>Payment Terms</dt>
+            <dd>The agreed time frame in which a customer must pay an invoice. Common examples: <em>Net 30</em> (pay within 30 days), <em>Immediate</em> (pay on receipt).</dd>
+
+            <dt>Purchase Invoice</dt>
+            <dd>A bill received from a supplier for goods or services you've purchased. Recording it in Fateh ERP creates an accounts payable entry.</dd>
+
+            <dt>Quotation</dt>
+            <dd>A formal price offer sent to a customer before a sale is confirmed. Can be converted to a Sales Order or Sales Invoice once accepted.</dd>
+
+            <dt>Sales Order</dt>
+            <dd>A confirmed customer order that authorises you to start fulfillment. Sits between a Quotation and a Sales Invoice in the workflow.</dd>
+
+            <dt>Stock Item</dt>
+            <dd>An item where Fateh tracks physical inventory levels (quantity in stock). Non-stock items (like services) don't have inventory levels.</dd>
+
+            <dt>Supplier</dt>
+            <dd>A company or individual from whom you purchase goods or services.</dd>
+
+            <dt>Trial Balance</dt>
+            <dd>A report showing the closing balance of every account at a specific date. Debits must equal credits — if they don't, there's an accounting error.</dd>
+
+            <dt>UOM (Unit of Measure)</dt>
+            <dd>How a quantity of an item is expressed. Examples: Nos (pieces), Kg, Box, Hour, Day.</dd>
+
+            <dt>VAT Return</dt>
+            <dd>A periodic report filed with ZATCA showing your output VAT (from sales), input VAT (from purchases), and net VAT payable or refundable.</dd>
+
+            <dt>ZATCA</dt>
+            <dd>Zakat, Tax and Customs Authority — the Saudi government body responsible for tax collection, including VAT and e-invoicing compliance.</dd>
+
+            <dt>ZATCA Clearance</dt>
+            <dd>ZATCA Phase 2 process where a B2B invoice is submitted to ZATCA <em>before</em> being shared with the customer. ZATCA validates and digitally signs the invoice.</dd>
+          </dl>
         </div>
-    
+
       </div>
-      <div class="page-nav"><a href="faq.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>FAQ</span></a><a href="support.html" class="page-nav-next"><span>Contact Support</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="faq.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>FAQ</span></a><a href="support.html" class="page-nav-next"><span>Contact Support</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

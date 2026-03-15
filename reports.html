@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,21 +24,29 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
-        <a href="stock.html" class="nav-link">Stock</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
@@ -59,64 +68,67 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Reports</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Reports Overview</span></div>
-      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Reports</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">Reports Overview</span>
+      </div>
+      <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
           <h1>Reports</h1>
-          <p>Fateh ERP includes a comprehensive set of financial and operational reports.</p>
+          <p>Fateh ERP has built-in reports for sales, purchasing, finance, and VAT. Here's where to find them and what each one tells you.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Accessing Reports</h2>
-          <p>Go to <strong>Accounts → Reports</strong> (or <strong>Selling/Buying → Reports</strong> for sales-specific reports). Each report has filters for date range, company, and other parameters.</p>
-        </div>
-
-        <div class="doc-section">
-          <h2>Key Financial Reports</h2>
-          <table class="doc-table">
-            <thead><tr><th>Report</th><th>What it shows</th><th>Location</th></tr></thead>
+          <h2>Finding reports</h2>
+          <p>Go to <strong>Reports</strong> in the left navigation. Reports are grouped by module:</p>
+          <table class="data-table">
+            <thead><tr><th>Report</th><th>Where to find</th><th>What it shows</th></tr></thead>
             <tbody>
-              <tr><td>Trial Balance</td><td>All account balances for a period</td><td>Accounts</td></tr>
-              <tr><td>Profit &amp; Loss</td><td>Revenue, expenses, and net profit</td><td>Accounts</td></tr>
-              <tr><td>Balance Sheet</td><td>Assets, liabilities, and equity</td><td>Accounts</td></tr>
-              <tr><td>Accounts Receivable</td><td>Outstanding invoices by customer and aging</td><td>Accounts</td></tr>
-              <tr><td>Accounts Payable</td><td>Outstanding bills by supplier and aging</td><td>Accounts</td></tr>
-              <tr><td>General Ledger</td><td>All transactions for any account</td><td>Accounts</td></tr>
+              <tr><td>Accounts Receivable Ageing</td><td>Reports → Accounts Receivable</td><td>Which customers owe you money and for how long</td></tr>
+              <tr><td>Accounts Payable Ageing</td><td>Reports → Accounts Payable</td><td>Which suppliers you owe and for how long</td></tr>
+              <tr><td>Sales Analytics</td><td>Reports → Sales Analytics</td><td>Revenue by customer, item, or period</td></tr>
+              <tr><td>Purchase Analytics</td><td>Reports → Purchase Analytics</td><td>Spending by supplier or item</td></tr>
+              <tr><td>General Ledger</td><td>Reports → General Ledger</td><td>Every transaction in any account</td></tr>
+              <tr><td>Trial Balance</td><td>Reports → Trial Balance</td><td>All account balances at a point in time</td></tr>
+              <tr><td>Profit &amp; Loss Statement</td><td>Reports → Profit and Loss</td><td>Revenue and expenses for a period</td></tr>
+              <tr><td>Balance Sheet</td><td>Reports → Balance Sheet</td><td>Assets, liabilities, and equity snapshot</td></tr>
+              <tr><td>VAT Audit Report</td><td>Reports → VAT Audit Report</td><td>All invoices with VAT amounts — for filing your VAT return</td></tr>
+              <tr><td>Stock Balance</td><td>Reports → Stock Balance</td><td>Current stock levels per item and warehouse</td></tr>
             </tbody>
           </table>
         </div>
 
         <div class="doc-section">
-          <h2>Key Sales Reports</h2>
-          <table class="doc-table">
-            <thead><tr><th>Report</th><th>What it shows</th></tr></thead>
-            <tbody>
-              <tr><td>Sales Analytics</td><td>Sales by customer, item, or time period</td></tr>
-              <tr><td>Sales Invoice Trends</td><td>Monthly invoice totals with charts</td></tr>
-              <tr><td>Delivery Note Trends</td><td>Delivery volumes over time</td></tr>
-              <tr><td>Item-wise Sales History</td><td>How much of each item was sold</td></tr>
-              <tr><td>Customer-wise Sales History</td><td>How much each customer bought</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="doc-section">
-          <h2>Exporting Reports</h2>
-          <p>Every report can be exported to:</p>
+          <h2>Using report filters</h2>
+          <p>Most reports have filters at the top. Common filters include:</p>
           <ul>
-            <li><strong>Excel (.xlsx)</strong> — for further analysis in spreadsheets</li>
-            <li><strong>CSV</strong> — for import into other systems</li>
+            <li><strong>From Date / To Date</strong> — set the period you want to analyse</li>
+            <li><strong>Company</strong> — if you have multiple companies</li>
+            <li><strong>Customer / Supplier</strong> — drill into a specific party</li>
+            <li><strong>Cost Centre</strong> — filter by department or project</li>
+          </ul>
+          <p>After setting filters click <strong>Refresh</strong> to update the report.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Exporting reports</h2>
+          <p>Every report has an <strong>Export</strong> button at the top right. Choose:</p>
+          <ul>
+            <li><strong>Excel (.xlsx)</strong> — for further analysis in a spreadsheet</li>
+            <li><strong>CSV</strong> — for importing into other systems</li>
             <li><strong>PDF</strong> — for sharing or printing</li>
           </ul>
-          <p>Click the <strong>Export</strong> button at the top-right of any report.</p>
         </div>
-    
+
       </div>
-      <div class="page-nav"><a href="zatca.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>ZATCA</span></a><a href="reports-ar.html" class="page-nav-next"><span>Accounts Receivable</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="zatca.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>ZATCA e-Invoicing</span></a><a href="faq.html" class="page-nav-next"><span>FAQ</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

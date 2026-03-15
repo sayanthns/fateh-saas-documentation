@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Navigation — Fateh ERP Docs</title>
+  <title>Dashboard & Navigation — Fateh ERP Docs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/docs.css"/>
@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,27 +24,42 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -52,56 +68,102 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Getting Started</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Navigation</span></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Getting Started</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">Dashboard & Navigation</span>
+      </div>
       <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
-          <h1>Navigation</h1>
-          <p>Learn how to move around Fateh ERP quickly.</p>
+          <h1>Dashboard &amp; Navigation</h1>
+          <p>A guided tour of the Fateh ERP dashboard and how to navigate every module.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Your Dashboard</h2>
-          <p>The Dashboard is the home screen. It shows you:</p>
-          <ul>
-            <li><strong>Today's Sales</strong> — total sales invoiced today</li>
-            <li><strong>Today's Collection</strong> — payments received today</li>
-            <li><strong>Total Outstanding</strong> — money customers still owe you</li>
-            <li><strong>Total Customers</strong> — number of customers in your account</li>
-          </ul>
-        <div class="screenshot">
-          <div class="ss-bar">
-            <div class="ss-dot" style="background:#fe5f57"></div>
-            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
-            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
-            <div class="ss-url">yourcompany.fateherp.com</div>
-          </div>
-          <img class="ss-img" src="assets/img/screens/02-dashboard.jpg" alt="Dashboard overview showing key business metrics"/>
-          <div class="ss-caption">Dashboard overview showing key business metrics</div>
-        </div>
+          <h2>The Dashboard at a glance</h2>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/02-dashboard.jpg" alt="Fateh ERP Dashboard — live business snapshot"/>
+  <div class="ss-caption">Fateh ERP Dashboard — live business snapshot</div>
+</div>
+          <p>When you log in you always land on the Dashboard. Everything you need is accessible from here.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Left sidebar</h2>
-          <p>Click any item in the left menu to open that section. The current section is highlighted in blue. The menu is split into:</p>
-          <ul>
-            <li><strong>SALES</strong> — for selling to your customers</li>
-            <li><strong>PURCHASE</strong> — for buying from your suppliers</li>
-            <li><strong>ACCOUNTING</strong> — for financial entries and reports</li>
-          </ul>
+          <h2>Dashboard summary cards</h2>
+          <p>The row of cards at the top gives you an instant financial snapshot:</p>
+          <table class="data-table">
+            <thead><tr><th>Card</th><th>What it shows</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Total Receivable</strong></td><td>Money owed to you by customers (unpaid invoices)</td></tr>
+              <tr><td><strong>Total Payable</strong></td><td>Money you owe suppliers (unpaid purchase invoices)</td></tr>
+              <tr><td><strong>This Month Sales</strong></td><td>Total invoiced revenue in the current calendar month</td></tr>
+              <tr><td><strong>This Month Purchases</strong></td><td>Total bills received from suppliers this month</td></tr>
+              <tr><td><strong>YTD Net Profit</strong></td><td>Revenue minus expenses since the start of the financial year</td></tr>
+            </tbody>
+          </table>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/02-dashboard-full.jpg" alt="Dashboard showing live data across all modules"/>
+  <div class="ss-caption">Dashboard showing live data across all modules</div>
+</div>
         </div>
 
         <div class="doc-section">
-          <h2>Opening and closing the sidebar</h2>
-          <p>On desktop, click the <strong>grid icon</strong> (☰) at the top of the sidebar to collapse it and get more screen space. Click it again to expand.</p>
-          <p>On mobile, tap the menu icon at the top-left to open the sidebar. Tap anywhere outside it to close.</p>
+          <h2>Left navigation menu</h2>
+          <p>The left sidebar is the main menu. It's organised into modules. Click any group label to expand it:</p>
+          <table class="data-table">
+            <thead><tr><th>Menu Section</th><th>What's inside</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Selling</strong></td><td>Customers, Quotations, Sales Invoices, Sales Orders, Payments Received</td></tr>
+              <tr><td><strong>Buying</strong></td><td>Suppliers, Purchase Invoices, Purchase Orders, Supplier Payments</td></tr>
+              <tr><td><strong>Stock</strong></td><td>Items, Warehouses, Stock Ledger, Stock Balance</td></tr>
+              <tr><td><strong>Accounts</strong></td><td>Chart of Accounts, Journal Entry, General Ledger, Trial Balance</td></tr>
+              <tr><td><strong>POS</strong></td><td>Point of Sale, POS Sessions, POS Reports</td></tr>
+              <tr><td><strong>Reports</strong></td><td>Financial reports, Tax summaries, Sales analysis</td></tr>
+              <tr><td><strong>Settings</strong></td><td>Company setup, Users, Taxes, Number series, Print formats</td></tr>
+            </tbody>
+          </table>
         </div>
+
+        <div class="doc-section">
+          <h2>Using the search bar</h2>
+          <p>The search bar at the top of the sidebar lets you find any module instantly. Start typing the name — for example type <strong>"inv"</strong> and you'll see <em>Sales Invoice</em>, <em>Purchase Invoice</em> appear. Click to navigate directly.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Quick keyboard shortcuts</h2>
+          <table class="data-table">
+            <thead><tr><th>Key</th><th>Action</th></tr></thead>
+            <tbody>
+              <tr><td><code>Ctrl + /</code></td><td>Focus the search bar</td></tr>
+              <tr><td><code>Alt + N</code></td><td>Create a new document in the current module</td></tr>
+              <tr><td><code>Ctrl + S</code></td><td>Save the current document</td></tr>
+              <tr><td><code>Escape</code></td><td>Close the current dialog or dropdown</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-info"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div>You can also access any page by typing its name into the top search bar. This works even for settings pages deep in the menus.</div></div>
 
       </div>
-      <div class="page-nav"><a href="first-login.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>First Login</span></a><a href="customers.html" class="page-nav-next"><span>Customers</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="first-login.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>First Login</span></a><a href="items.html" class="page-nav-next"><span>Items</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

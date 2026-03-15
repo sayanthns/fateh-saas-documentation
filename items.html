@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,27 +24,42 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -52,75 +68,133 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Inventory</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Items</span></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Inventory</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">Items</span>
+      </div>
       <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
-          <h1>Items</h1>
-          <p>Items are the products and services you sell. You need to create an item before you can add it to an invoice or quotation.</p>
+          <h1>Items (Products &amp; Services)</h1>
+          <p>Items are the products and services you buy and sell. Every invoice and quotation is built from items. Create your items library before you start transacting.</p>
+        </div>
+
+        <div class="callout callout-info"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div>You only need to create each item once. After that, it appears in every invoice and quotation dropdown automatically.</div></div>
+
+        <div class="doc-section">
+          <h2>Opening the Items list</h2>
+          <p>Go to <strong>Stock → Items</strong> in the left menu. You'll see all your existing items:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/03-items-list-empty.jpg" alt="Items list — currently empty, ready for your first item"/>
+  <div class="ss-caption">Items list — currently empty, ready for your first item</div>
+</div>
+          <p>The table shows each item's <strong>name</strong>, <strong>item code</strong>, <strong>group</strong>, and <strong>unit of measure</strong>. When you're just getting started the list will be empty.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Items list</h2>
-          <p>Click <strong>Items</strong> in the left menu. You'll see all your items with their price and stock level.</p>
-        <div class="screenshot">
-          <div class="ss-bar">
-            <div class="ss-dot" style="background:#fe5f57"></div>
-            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
-            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
-            <div class="ss-url">yourcompany.fateherp.com</div>
-          </div>
-          <img class="ss-img" src="assets/img/screens/10-items-list.jpg" alt="Items list — all your products and services"/>
-          <div class="ss-caption">Items list — all your products and services</div>
-        </div>
-        </div>
+          <h2>Creating a new item — step by step</h2>
+          <p>Click the <strong>+ New Item</strong> button at the top right. An empty item form opens:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/03b-new-item-empty.jpg" alt="New Item form — all fields blank and ready to fill"/>
+  <div class="ss-caption">New Item form — all fields blank and ready to fill</div>
+</div>
 
-        <div class="doc-section">
-          <h2>Adding a new item</h2>
-          <p>Click <strong>+ New Item</strong>. Fill in the form:</p>
-        <div class="screenshot">
-          <div class="ss-bar">
-            <div class="ss-dot" style="background:#fe5f57"></div>
-            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
-            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
-            <div class="ss-url">yourcompany.fateherp.com</div>
-          </div>
-          <img class="ss-img" src="assets/img/screens/11-new-item.jpg" alt="New Item form — enter item name, code, price and stock details"/>
-          <div class="ss-caption">New Item form — enter item name, code, price and stock details</div>
-        </div>
           <div class="steps">
-            <div class="step"><div class="step-num">1</div><div class="step-content">
-              <h4>Item Name</h4>
-              <p>A clear name your team will recognise. Example: <em>Office Chair</em> or <em>Consulting Service (1hr)</em>.</p>
-            </div></div>
-            <div class="step"><div class="step-num">2</div><div class="step-content">
-              <h4>Item Code</h4>
-              <p>A unique code for this item. This appears on invoices. Example: <em>CHAIR-001</em>.</p>
-            </div></div>
-            <div class="step"><div class="step-num">3</div><div class="step-content">
-              <h4>Unit of Measure (UOM)</h4>
-              <p>How this item is measured or sold. Common options: <em>Nos</em> (pieces), <em>Kg</em>, <em>Box</em>, <em>Hour</em>.</p>
-            </div></div>
-            <div class="step"><div class="step-num">4</div><div class="step-content">
-              <h4>Rate (selling price)</h4>
-              <p>The price you charge customers for one unit of this item, before VAT.</p>
-            </div></div>
-            <div class="step"><div class="step-num">5</div><div class="step-content">
-              <h4>Is Stock Item?</h4>
-              <p>Tick this if you physically track inventory (e.g., goods in a warehouse). Leave unticked for services.</p>
-            </div></div>
-            <div class="step"><div class="step-num">6</div><div class="step-content">
-              <h4>Click Create Item</h4>
-              <p>The item is now available to select when creating invoices and quotations.</p>
-            </div></div>
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Item Name</h4><p>Enter a clear, descriptive name. This is what you and your customers will see on invoices. Example: <em>Office Chair - Executive</em> or <em>IT Consulting (per hour)</em>.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Item Code</h4><p>A short unique code for this item. It appears on print formats and helps you find items quickly. Example: <em>CHAIR-001</em>, <em>CONSULT-HR</em>. If left blank Fateh will auto-generate one.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Item Group</h4><p>Choose a category: <em>Products</em> for physical goods, <em>Services</em> for consultancy or labour, or create your own group. Groups help in reporting.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Unit of Measure (UOM)</h4><p>How is this item counted? Common choices: <strong>Nos</strong> (pieces/units), <strong>Kg</strong>, <strong>Litre</strong>, <strong>Box</strong>, <strong>Hour</strong>, <strong>Day</strong>.</p></div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Is Stock Item</h4><p>Enable this toggle if you physically track inventory levels (e.g., chairs in a warehouse). Leave it off for services — there is no physical stock to track.</p></div></div>
+            <div class="step"><div class="step-num">6</div><div class="step-content"><h4>Standard Selling Rate</h4><p>Set the default price you charge customers. This pre-fills on invoices but can be overridden per transaction.</p></div></div>
           </div>
+
+          <p>Here's the form filled in for an office chair:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/03c-new-item-filled.jpg" alt="New Item form filled in — Office Chair with item code, price and stock settings"/>
+  <div class="ss-caption">New Item form filled in — Office Chair with item code, price and stock settings</div>
+</div>
         </div>
+
+        <div class="doc-section">
+          <h2>Saving the item</h2>
+          <p>Click <strong>Create Item</strong> (or <strong>Save</strong>). The item is created and you are taken to its detail page:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/03d-item-saved.jpg" alt="Item saved — the detail page showing all item information"/>
+  <div class="ss-caption">Item saved — the detail page showing all item information</div>
+</div>
+          <p>From the item detail page you can:</p>
+          <ul>
+            <li>Edit any field and click <strong>Save</strong></li>
+            <li>View <strong>stock ledger</strong> — every movement in and out of stock</li>
+            <li>Set <strong>multiple selling rates</strong> for different price lists</li>
+            <li>Attach files (product images, spec sheets)</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2>Items list after adding items</h2>
+          <p>After adding a few items your list looks like this:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/03e-items-list-filled.jpg" alt="Items list — showing Office Chair, Consulting Service and Laptop after creation"/>
+  <div class="ss-caption">Items list — showing Office Chair, Consulting Service and Laptop after creation</div>
+</div>
+          <p>You can use the search bar at the top of the list to filter by name or code.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Item groups &amp; categories</h2>
+          <p>Grouping items makes reports more useful. Typical groups for a trading company:</p>
+          <table class="data-table">
+            <thead><tr><th>Group</th><th>Example items</th></tr></thead>
+            <tbody>
+              <tr><td>Products</td><td>Computers, Furniture, Office Supplies</td></tr>
+              <tr><td>Services</td><td>Consulting, Installation, Support</td></tr>
+              <tr><td>Software</td><td>Licenses, SaaS subscriptions</td></tr>
+              <tr><td>Raw Materials</td><td>Steel, Fabric, Chemicals (if you manufacture)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-warning"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><div><strong>VAT tip:</strong> If an item is subject to 15% VAT (most goods/services in Saudi Arabia), make sure the correct <strong>Item Tax Template</strong> is attached to the item. Go to the Taxes tab on the item form and add your VAT template.</div></div>
 
       </div>
-      <div class="page-nav"><a href="purchase-invoices.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Purchase Invoices</span></a><a href="vat.html" class="page-nav-next"><span>VAT</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="navigation.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Dashboard & Navigation</span></a><a href="customers.html" class="page-nav-next"><span>Customers</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

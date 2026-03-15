@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,27 +24,42 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -52,7 +68,13 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Sales</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Customers</span></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Sales</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">Customers</span>
+      </div>
       <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
@@ -60,69 +82,108 @@
 
         <div class="page-hero">
           <h1>Customers</h1>
-          <p>Add the companies and individuals you sell to. You need to add a customer before you can create an invoice or quotation for them.</p>
+          <p>Customers are the companies and individuals you invoice. Add them once and select them on every sales transaction.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Viewing your customers</h2>
-          <p>Go to <strong>Customers</strong> in the left menu. You'll see a list of all your customers with their type, VAT number, and outstanding balance.</p>
-        <div class="screenshot">
-          <div class="ss-bar">
-            <div class="ss-dot" style="background:#fe5f57"></div>
-            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
-            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
-            <div class="ss-url">yourcompany.fateherp.com</div>
-          </div>
-          <img class="ss-img" src="assets/img/screens/03-customers-list.jpg" alt="The Customers list — all your customers in one place"/>
-          <div class="ss-caption">The Customers list — all your customers in one place</div>
-        </div>
+          <h2>Customers list</h2>
+          <p>Go to <strong>Selling → Customers</strong>. You'll see all your customers:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/04-customers-list.jpg" alt="Customers list — showing all your buyers"/>
+  <div class="ss-caption">Customers list — showing all your buyers</div>
+</div>
+          <p>The list shows the customer name, type (Company or Individual), and the territory. Use the search bar to find any customer instantly.</p>
         </div>
 
         <div class="doc-section">
           <h2>Adding a new customer</h2>
-          <p>Click the <strong>+ New Customer</strong> button at the top right. A form appears:</p>
-        <div class="screenshot">
-          <div class="ss-bar">
-            <div class="ss-dot" style="background:#fe5f57"></div>
-            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
-            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
-            <div class="ss-url">yourcompany.fateherp.com</div>
-          </div>
-          <img class="ss-img" src="assets/img/screens/04-new-customer.jpg" alt="New Customer form — fill in name, type, and VAT number"/>
-          <div class="ss-caption">New Customer form — fill in name, type, and VAT number</div>
-        </div>
+          <p>Click <strong>+ New Customer</strong>. The blank customer form opens:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/04b-new-customer-empty.jpg" alt="New Customer form — blank and ready to fill"/>
+  <div class="ss-caption">New Customer form — blank and ready to fill</div>
+</div>
+
           <div class="steps">
-            <div class="step"><div class="step-num">1</div><div class="step-content">
-              <h4>Customer Name</h4>
-              <p>Enter the full name of the company or person. Example: <em>Al Noor Trading Co.</em></p>
-            </div></div>
-            <div class="step"><div class="step-num">2</div><div class="step-content">
-              <h4>Type</h4>
-              <p>Choose <strong>Company</strong> if you're selling to a business, or <strong>Individual</strong> for a person.</p>
-            </div></div>
-            <div class="step"><div class="step-num">3</div><div class="step-content">
-              <h4>VAT Registration No.</h4>
-              <p>If this customer is VAT-registered in Saudi Arabia, enter their 15-digit VAT number here. This is required for B2B invoices submitted to ZATCA.</p>
-            </div></div>
-            <div class="step"><div class="step-num">4</div><div class="step-content">
-              <h4>Click Create Customer</h4>
-              <p>The customer is saved and ready to use in invoices and quotations.</p>
-            </div></div>
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Customer Name</h4><p>Enter the full legal name of the company or the person's name. This appears on all invoices.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Customer Type</h4><p>Choose <strong>Company</strong> for businesses (the default for B2B), or <strong>Individual</strong> for a person.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Customer Group</h4><p>A group helps you organise and report on customers. Common groups: <em>Corporate</em>, <em>Government</em>, <em>Retail</em>.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Territory</h4><p>The region where this customer is located. Used in sales reports and for regional targets.</p></div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Tax ID (VAT Number)</h4><p>For Saudi customers: enter their 15-digit VAT registration number. This prints on the invoice as required by ZATCA.</p></div></div>
+            <div class="step"><div class="step-num">6</div><div class="step-content"><h4>Mobile / Email</h4><p>Add at least one contact method so your team can reach the customer.</p></div></div>
+            <div class="step"><div class="step-num">7</div><div class="step-content"><h4>Billing Address</h4><p>Enter the full address. For ZATCA compliance this must match the address on their VAT certificate.</p></div></div>
           </div>
+
+          <p>Here's the form filled in for a corporate customer:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/04c-new-customer-filled.jpg" alt="New Customer form filled — Al Manara Trading Co. with VAT number and contact details"/>
+  <div class="ss-caption">New Customer form filled — Al Manara Trading Co. with VAT number and contact details</div>
+</div>
         </div>
 
         <div class="doc-section">
-          <h2>Outstanding balance</h2>
-          <p>The <strong>Outstanding</strong> column shows how much each customer still owes you (total unpaid invoices). When you record a payment, this number goes down automatically.</p>
+          <h2>Saving the customer</h2>
+          <p>Click <strong>Save</strong>. The customer record is created:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/04d-customer-saved.jpg" alt="Customer saved — detail page showing all customer information and transaction history"/>
+  <div class="ss-caption">Customer saved — detail page showing all customer information and transaction history</div>
+</div>
+          <p>From the customer detail page you can:</p>
+          <ul>
+            <li>View the <strong>outstanding balance</strong> — how much this customer owes you</li>
+            <li>See all <strong>invoices</strong> and <strong>payments</strong> linked to this customer</li>
+            <li>Set a <strong>credit limit</strong> — Fateh will warn you before you over-extend credit</li>
+            <li>Add <strong>multiple contacts</strong> and <strong>addresses</strong> (billing vs. delivery)</li>
+            <li>Assign a <strong>default price list</strong> or discount percentage</li>
+          </ul>
         </div>
 
-        <div class="callout callout-info">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <div>You can also add a new customer on-the-fly when creating an invoice — just click the <strong>+</strong> button next to the Customer field.</div>
+        <div class="doc-section">
+          <h2>Customer list with data</h2>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/04e-customers-list-filled.jpg" alt="Customers list showing Al Manara Trading and Ahmed Al Rashid after creation"/>
+  <div class="ss-caption">Customers list showing Al Manara Trading and Ahmed Al Rashid after creation</div>
+</div>
         </div>
+
+        <div class="doc-section">
+          <h2>Customer credit limits</h2>
+          <p>To set a credit limit, open the customer record, go to the <strong>Credit Limit</strong> tab and enter the maximum outstanding balance you allow. When creating an invoice that would exceed this limit Fateh will show a warning.</p>
+        </div>
+
+        <div class="callout callout-info"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div>For ZATCA Phase 2 compliance, every B2B invoice requires the customer's VAT number. Make sure you collect and store this when onboarding new customers.</div></div>
 
       </div>
-      <div class="page-nav"><a href="navigation.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Navigation</span></a><a href="quotations.html" class="page-nav-next"><span>Quotations</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="items.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Items</span></a><a href="quotations.html" class="page-nav-next"><span>Quotations</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

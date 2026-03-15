@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stock — Fateh ERP Docs</title>
+  <title>Stock & Warehouses — Fateh ERP Docs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/docs.css"/>
@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,21 +24,29 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
-        <a href="stock.html" class="nav-link">Stock</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
@@ -59,61 +68,75 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Inventory</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Stock</span></div>
-      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Inventory</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">Stock & Warehouses</span>
+      </div>
+      <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
-          <h1>Stock</h1>
-          <p>Track inventory levels, receive goods into your warehouse, and move stock between locations.</p>
+          <h1>Stock &amp; Warehouses</h1>
+          <p>Track inventory levels, warehouse locations, and stock movements in real time.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Opening Stock Entry</h2>
-          <p>To record your initial inventory when starting with Fateh ERP:</p>
+          <h2>Deliveries list</h2>
+          <p>Go to <strong>Stock → Delivery Note</strong> to see all outbound shipments:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/11-deliveries-list.jpg" alt="Deliveries list — all goods dispatched to customers"/>
+  <div class="ss-caption">Deliveries list — all goods dispatched to customers</div>
+</div>
+        </div>
+
+        <div class="doc-section">
+          <h2>Stock Balance</h2>
+          <p>Go to <strong>Reports → Stock Balance</strong> to see current stock levels:</p>
+          <ul>
+            <li><strong>Item</strong> — the product name and code</li>
+            <li><strong>Warehouse</strong> — which location holds this stock</li>
+            <li><strong>Opening Qty</strong> — stock at the start of the period</li>
+            <li><strong>In Qty</strong> — stock received (purchase receipts, production)</li>
+            <li><strong>Out Qty</strong> — stock dispatched (deliveries, sales)</li>
+            <li><strong>Balance Qty</strong> — current on-hand quantity</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2>Warehouses</h2>
+          <p>Fateh supports multiple warehouses. Go to <strong>Stock → Warehouse</strong> to manage them. For each warehouse you can:</p>
+          <ul>
+            <li>Set a warehouse address</li>
+            <li>Assign a default account for stock valuation</li>
+            <li>Create child warehouses for zones or aisles</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2>Stock Entry (Adjustments)</h2>
+          <p>To manually adjust stock levels (physical stock count corrections):</p>
           <div class="steps">
-            <div class="step"><div class="step-num">1</div><div class="step-content">
-              <h4>Go to Stock → Stock Entry → New</h4>
-            </div></div>
-            <div class="step"><div class="step-num">2</div><div class="step-content">
-              <h4>Set Purpose to "Material Receipt"</h4>
-            </div></div>
-            <div class="step"><div class="step-num">3</div><div class="step-content">
-              <h4>Set Target Warehouse</h4>
-              <p>Select the warehouse where the stock will be stored (e.g., Main Warehouse).</p>
-            </div></div>
-            <div class="step"><div class="step-num">4</div><div class="step-content">
-              <h4>Add items and quantities</h4>
-              <p>Add each item with the opening quantity and valuation rate (cost price).</p>
-            </div></div>
-            <div class="step"><div class="step-num">5</div><div class="step-content">
-              <h4>Submit</h4>
-            </div></div>
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Go to Stock → Stock Entry</h4><p>Click + New Stock Entry.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Purpose: Material Receipt</h4><p>To add stock (e.g., opening balance). Choose <em>Material Receipt</em>.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Purpose: Material Issue</h4><p>To reduce stock (e.g., damaged goods). Choose <em>Material Issue</em>.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Add items</h4><p>Specify the item, warehouse, and quantity.</p></div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Submit</h4><p>The stock ledger is updated immediately.</p></div></div>
           </div>
         </div>
 
-        <div class="doc-section">
-          <h2>Checking Stock Levels</h2>
-          <p>Go to <strong>Stock → Stock Balance</strong> or open any Item and go to the <strong>Dashboard</strong> tab. You'll see the quantity on hand in each warehouse, reserved quantity, and projected quantity.</p>
-        </div>
-
-        <div class="doc-section">
-          <h2>Stock Entry Types</h2>
-          <table class="doc-table">
-            <thead><tr><th>Type</th><th>Use case</th></tr></thead>
-            <tbody>
-              <tr><td>Material Receipt</td><td>Receiving goods into a warehouse (without a purchase invoice)</td></tr>
-              <tr><td>Material Issue</td><td>Consuming goods from stock (e.g., for manufacturing)</td></tr>
-              <tr><td>Material Transfer</td><td>Moving stock between warehouses</td></tr>
-              <tr><td>Stock Reconciliation</td><td>Adjusting stock after a physical count</td></tr>
-            </tbody>
-          </table>
-        </div>
-    
       </div>
-      <div class="page-nav"><a href="items.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Items</span></a><a href="vat.html" class="page-nav-next"><span>VAT</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="items.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Items</span></a><a href="customers.html" class="page-nav-next"><span>Customers</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

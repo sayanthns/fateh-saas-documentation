@@ -728,3 +728,93 @@ kbd {
   .hero-actions { flex-direction: column; }
   .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
 }
+
+/* ---- Data Table ---- */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 20px 0;
+}
+.data-table th {
+  background: var(--fateh-sky-lt);
+  color: var(--fateh-navy);
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+}
+.data-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--gray-700);
+  vertical-align: top;
+}
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:hover td { background: var(--bg-light); }
+
+/* ---- FAQ Accordion ---- */
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-item summary {
+  padding: 14px 18px;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--gray-800);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-light);
+  transition: background .15s;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-size: 20px;
+  color: var(--fateh-blue);
+  font-weight: 300;
+}
+.faq-item[open] summary::after { content: "−"; }
+.faq-item summary:hover { background: var(--fateh-sky-lt); }
+.faq-item p {
+  padding: 14px 18px;
+  margin: 0;
+  font-size: 14px;
+  color: var(--gray-600);
+  border-top: 1px solid var(--border);
+}
+
+/* ---- Glossary ---- */
+.glossary-list {
+  margin: 0;
+}
+.glossary-list dt {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--fateh-navy);
+  margin-top: 24px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+.glossary-list dd {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+/* ---- Sidebar toggle button ---- */
+.sidebar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: var(--gray-400);
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VAT — Fateh ERP Docs</title>
+  <title>Point of Sale (POS) — Fateh ERP Docs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/docs.css"/>
@@ -71,9 +71,9 @@
       <div class="topbar-breadcrumb">
         <span>Docs</span>
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-        <span>Compliance</span>
+        <span>Sales</span>
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-        <span class="active">VAT</span>
+        <span class="active">Point of Sale</span>
       </div>
       <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
@@ -81,62 +81,61 @@
       <div class="content-inner">
 
         <div class="page-hero">
-          <h1>VAT (Value Added Tax)</h1>
-          <p>Fateh ERP handles Saudi Arabia VAT automatically. Here's how it works and what you need to know.</p>
-        </div>
-
-        <div class="callout callout-info"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div>Saudi Arabia's standard VAT rate is <strong>15%</strong>. All VAT-registered businesses must apply this to most goods and services.</div></div>
-
-        <div class="doc-section">
-          <h2>How VAT works in Fateh</h2>
-          <p>Fateh ERP separates your transactions into:</p>
-          <table class="data-table">
-            <thead><tr><th>Type</th><th>Description</th><th>Where it appears</th></tr></thead>
-            <tbody>
-              <tr><td><strong>Output VAT</strong></td><td>VAT you charge customers (collect on their behalf for ZATCA)</td><td>Sales Invoices</td></tr>
-              <tr><td><strong>Input VAT</strong></td><td>VAT you pay to suppliers (you can claim this back)</td><td>Purchase Invoices</td></tr>
-              <tr><td><strong>Net VAT payable</strong></td><td>Output VAT minus Input VAT = what you pay to ZATCA</td><td>VAT Return report</td></tr>
-            </tbody>
-          </table>
+          <h1>Point of Sale (POS)</h1>
+          <p>The POS module lets you process walk-in or counter sales quickly — without going through the full invoice workflow.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Setting up VAT on items</h2>
-          <p>To make VAT appear automatically on invoices:</p>
+          <h2>POS screen</h2>
+          <p>Go to <strong>Retail → POS</strong> or click <strong>POS</strong> in the menu:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/12-pos.jpg" alt="POS screen — the retail counter interface"/>
+  <div class="ss-caption">POS screen — the retail counter interface</div>
+</div>
+          <p>The POS screen is split into two panels:</p>
+          <ul>
+            <li><strong>Left panel</strong> — item catalogue. Click any item to add it to the current sale.</li>
+            <li><strong>Right panel</strong> — the current transaction with running total and payment options.</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2>Making a sale on POS</h2>
           <div class="steps">
-            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Open an Item</h4><p>Go to Stock → Items and open any item.</p></div></div>
-            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Taxes tab</h4><p>Click the <strong>Taxes</strong> tab on the item form.</p></div></div>
-            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Add Tax Template</h4><p>Click Add Row and select <em>KSA VAT 15%</em> (or the tax template your accountant set up).</p></div></div>
-            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Save</h4><p>Now every time this item is added to an invoice, 15% VAT is calculated automatically.</p></div></div>
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Select a customer (optional)</h4><p>Search and select a customer if this is a registered account sale. For cash sales you can use a generic 'Walk-in Customer'.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Add items</h4><p>Click items in the catalogue or scan barcodes. Each click adds one unit. Click again or edit the quantity field for more.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Apply discount (if any)</h4><p>Click on a line item and enter a line discount, or apply a global discount on the total.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Select payment method</h4><p>Click <strong>Pay</strong>. Choose <em>Cash</em>, <em>Card</em>, or <em>Multiple</em> for split payments.</p></div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Collect payment &amp; print receipt</h4><p>Enter the amount received. Fateh calculates change. Click <strong>Complete</strong> to finalise and print the receipt.</p></div></div>
           </div>
         </div>
 
         <div class="doc-section">
-          <h2>Generating a VAT return</h2>
-          <p>At the end of each VAT filing period (quarterly for most businesses):</p>
-          <div class="steps">
-            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Go to Reports → VAT Audit Report</h4><p>This shows all sales and purchase invoices with their VAT amounts for the period.</p></div></div>
-            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Set the date range</h4><p>Select the start and end date of your VAT period.</p></div></div>
-            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Review the summary</h4><p>Check: Total Output VAT (from sales), Total Input VAT (from purchases), Net VAT payable.</p></div></div>
-            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Export</h4><p>Download the report as Excel or PDF to prepare your ZATCA VAT return filing.</p></div></div>
-          </div>
+          <h2>Opening &amp; closing a POS session</h2>
+          <p>Before your first sale of the day you must <strong>open a POS session</strong>:</p>
+          <ol>
+            <li>Go to POS and click <strong>Open New Session</strong></li>
+            <li>Enter the <strong>opening cash balance</strong> in the till</li>
+            <li>Click <strong>Open</strong> — you can now process sales</li>
+          </ol>
+          <p>At the end of the day close the session:</p>
+          <ol>
+            <li>Click <strong>Close Session</strong></li>
+            <li>Count your cash and enter the <strong>closing balance</strong></li>
+            <li>Fateh will show the expected balance vs. actual — any difference is flagged</li>
+          </ol>
         </div>
 
-        <div class="doc-section">
-          <h2>Zero-rated and exempt items</h2>
-          <table class="data-table">
-            <thead><tr><th>Category</th><th>VAT Rate</th><th>Examples</th></tr></thead>
-            <tbody>
-              <tr><td>Standard rated</td><td>15%</td><td>Most goods &amp; services</td></tr>
-              <tr><td>Zero-rated</td><td>0%</td><td>Exports, international transport, certain medicines</td></tr>
-              <tr><td>Exempt</td><td>No VAT</td><td>Residential property rental, certain financial services</td></tr>
-            </tbody>
-          </table>
-          <p>For zero-rated exports, use a separate tax template <em>KSA VAT 0%</em> on those items.</p>
-        </div>
+        <div class="callout callout-info"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div>All POS sales are automatically recorded as invoices and appear in your accounts. No separate data entry needed.</div></div>
 
       </div>
-<div class="page-nav"><a href="expense-entries.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Expense Entries</span></a><a href="zatca.html" class="page-nav-next"><span>ZATCA (e-Invoicing)</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="sales-orders.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Sales Orders</span></a><a href="suppliers.html" class="page-nav-next"><span>Suppliers</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,27 +24,42 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -52,7 +68,13 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Sales</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Sales Invoices</span></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Sales</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">Sales Invoices</span>
+      </div>
       <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
@@ -60,77 +82,144 @@
 
         <div class="page-hero">
           <h1>Sales Invoices</h1>
-          <p>Create invoices for your customers. Fateh ERP automatically calculates VAT and submits the invoice to ZATCA — you just fill in the details and click Save.</p>
+          <p>Issue tax-compliant invoices to your customers. Fateh automatically calculates VAT and — for Saudi Arabia — submits each invoice to the ZATCA portal.</p>
+        </div>
+
+        <div class="callout callout-success"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><div>Fateh ERP handles <strong>ZATCA Phase 2</strong> e-invoicing automatically. When you submit a sales invoice, the XML and QR code are generated and sent to the ZATCA portal without any extra work from you.</div></div>
+
+        <div class="doc-section">
+          <h2>Sales Invoices list</h2>
+          <p>Go to <strong>Accounts → Sales Invoice</strong> (or <strong>Selling → Sales Invoices</strong>):</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/08-invoices-list.jpg" alt="Sales Invoices list — all issued invoices"/>
+  <div class="ss-caption">Sales Invoices list — all issued invoices</div>
+</div>
+          <p>Each row shows: invoice number, customer, date, net amount, VAT, total, and payment status (<em>Unpaid</em>, <em>Paid</em>, <em>Overdue</em>).</p>
         </div>
 
         <div class="doc-section">
-          <h2>Your invoices list</h2>
-          <p>Click <strong>Invoices</strong> in the left menu. You can filter by All, Draft, Unpaid, Paid, or Overdue.</p>
-        <div class="screenshot">
-          <div class="ss-bar">
-            <div class="ss-dot" style="background:#fe5f57"></div>
-            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
-            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
-            <div class="ss-url">yourcompany.fateherp.com</div>
-          </div>
-          <img class="ss-img" src="assets/img/screens/05-invoices-list.jpg" alt="Invoices list — filter by status to see what's paid and what's outstanding"/>
-          <div class="ss-caption">Invoices list — filter by status to see what's paid and what's outstanding</div>
-        </div>
-        </div>
+          <h2>Creating a new sales invoice</h2>
+          <p>Click <strong>+ New Sales Invoice</strong>. The blank form opens:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/08b-new-invoice-empty.jpg" alt="New Sales Invoice form — blank"/>
+  <div class="ss-caption">New Sales Invoice form — blank</div>
+</div>
 
-        <div class="doc-section">
-          <h2>Creating a new invoice</h2>
-          <p>Click <strong>+ New Invoice</strong>. The invoice form opens:</p>
-        <div class="screenshot">
-          <div class="ss-bar">
-            <div class="ss-dot" style="background:#fe5f57"></div>
-            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
-            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
-            <div class="ss-url">yourcompany.fateherp.com</div>
-          </div>
-          <img class="ss-img" src="assets/img/screens/06-new-invoice.jpg" alt="New Sales Invoice form — select customer, add items, VAT is auto-calculated"/>
-          <div class="ss-caption">New Sales Invoice form — select customer, add items, VAT is auto-calculated</div>
-        </div>
           <div class="steps">
-            <div class="step"><div class="step-num">1</div><div class="step-content">
-              <h4>Credit Invoice or Cash Invoice?</h4>
-              <p>Choose <strong>Credit Invoice</strong> if the customer will pay later. Choose <strong>Cash Invoice</strong> if they're paying right now (cash sale).</p>
-            </div></div>
-            <div class="step"><div class="step-num">2</div><div class="step-content">
-              <h4>Select the customer</h4>
-              <p>Pick the customer from the dropdown. If they're not listed, click <strong>+</strong> to add them on the spot.</p>
-            </div></div>
-            <div class="step"><div class="step-num">3</div><div class="step-content">
-              <h4>Set Invoice Date and Due Date</h4>
-              <p>The invoice date is today by default. The due date is when payment is expected (e.g., 30 days later).</p>
-            </div></div>
-            <div class="step"><div class="step-num">4</div><div class="step-content">
-              <h4>Add items</h4>
-              <p>In the <strong>Items</strong> table, select each item, enter the quantity, and confirm the rate. Click <strong>+ Add Item</strong> for each new line.</p>
-            </div></div>
-            <div class="step"><div class="step-num">5</div><div class="step-content">
-              <h4>Check VAT and total</h4>
-              <p>Make sure <strong>Apply VAT (15%)</strong> is ticked if this sale is taxable. The Subtotal, VAT, and Total update automatically.</p>
-            </div></div>
-            <div class="step"><div class="step-num">6</div><div class="step-content">
-              <h4>Click Save as Draft or Submit</h4>
-              <p><strong>Save as Draft</strong> lets you review before finalising. <strong>Submit</strong> locks the invoice, sends it to ZATCA, and makes it ready to share with your customer.</p>
-            </div></div>
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Customer</h4><p>Select the customer from the dropdown. Their billing address and VAT number fill in automatically.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Posting Date</h4><p>The invoice date. Defaults to today. Important: this is the date that appears on the PDF and is used for VAT reporting.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Due Date</h4><p>Payment deadline. If you've set payment terms on the customer (e.g., Net 30), this fills automatically.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Add items</h4><p>In the Items table, click <strong>Add Row</strong>. Start typing the item name and select it. Enter the quantity.</p></div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Rate</h4><p>The unit price. Pre-fills from the item's default selling rate. Override here if needed for this specific invoice.</p></div></div>
+            <div class="step"><div class="step-num">6</div><div class="step-content"><h4>Tax</h4><p>The taxes section shows the VAT amount. It calculates automatically if your items have a tax template attached. For Saudi Arabia this is typically <em>15% VAT</em>.</p></div></div>
           </div>
-        </div>
 
-        <div class="callout callout-success">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          <div><strong>ZATCA is handled automatically.</strong> When you submit an invoice, Fateh ERP sends it to ZATCA and gets clearance. You don't need to do anything extra — just submit the invoice normally.</div>
+          <p>Invoice with one line item added:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/08c-invoice-filled.jpg" alt="Invoice with customer selected and item added"/>
+  <div class="ss-caption">Invoice with customer selected and item added</div>
+</div>
         </div>
 
         <div class="doc-section">
-          <h2>Printing or emailing the invoice</h2>
-          <p>After submitting, open the invoice and click <strong>Print</strong> to download a PDF, or click <strong>Email</strong> to send it directly to the customer. The PDF includes the ZATCA QR code.</p>
+          <h2>VAT calculation</h2>
+          <p>Once you add items, scroll down to the <strong>Taxes and Charges</strong> section to see the VAT breakdown:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/08d-invoice-with-vat.jpg" alt="Invoice showing automatic 15% VAT calculation"/>
+  <div class="ss-caption">Invoice showing automatic 15% VAT calculation</div>
+</div>
+          <table class="data-table">
+            <thead><tr><th>Line</th><th>Description</th><th>Amount (SAR)</th></tr></thead>
+            <tbody>
+              <tr><td>Net Total</td><td>Total before VAT</td><td>750.00</td></tr>
+              <tr><td>VAT 15%</td><td>Output VAT calculated automatically</td><td>112.50</td></tr>
+              <tr><td><strong>Grand Total</strong></td><td><strong>Amount the customer pays</strong></td><td><strong>862.50</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-section">
+          <h2>Submitting the invoice</h2>
+          <p>Click <strong>Save</strong> to review, then <strong>Submit</strong> to finalise. Once submitted:</p>
+          <ul>
+            <li>The invoice is <strong>locked</strong> (no edits allowed — you must cancel and amend if corrections are needed)</li>
+            <li>Fateh generates the <strong>ZATCA XML</strong> and submits it to the ZATCA portal</li>
+            <li>The <strong>QR code</strong> appears on the printed invoice</li>
+            <li>The invoice shows <strong>ZATCA clearance status</strong> (Cleared or Reported)</li>
+          </ul>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/08e-invoice-saved.jpg" alt="Submitted invoice with ZATCA status and QR code"/>
+  <div class="ss-caption">Submitted invoice with ZATCA status and QR code</div>
+</div>
+        </div>
+
+        <div class="doc-section">
+          <h2>Invoices list with data</h2>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/08f-invoices-with-data.jpg" alt="Sales Invoices list showing multiple invoices with payment status"/>
+  <div class="ss-caption">Sales Invoices list showing multiple invoices with payment status</div>
+</div>
+        </div>
+
+        <div class="doc-section">
+          <h2>Printing &amp; sending the invoice</h2>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Click Print</h4><p>On the submitted invoice, click the <strong>Print</strong> button to preview the PDF.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Choose a print format</h4><p>Fateh comes with standard Arabic and English formats. Your administrator may have set up a custom branded format.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Email to customer</h4><p>Click <strong>Email</strong> on the invoice. A compose window opens with the PDF automatically attached.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Download PDF</h4><p>Click the download icon to save the PDF locally if you need to share it another way.</p></div></div>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <h2>Cancelling or amending an invoice</h2>
+          <p>You cannot edit a submitted invoice. To make corrections:</p>
+          <ol>
+            <li>Open the invoice and click <strong>Cancel</strong>. This creates a reversal entry.</li>
+            <li>Click <strong>Amend</strong> to create an editable copy with the same number (appended with <em>-1</em>).</li>
+            <li>Make your changes and <strong>Submit</strong> the amended invoice.</li>
+          </ol>
+          <div class="callout callout-warning"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><div>Cancelling a ZATCA-submitted invoice also sends a cancellation to the ZATCA portal. Make sure you have a valid reason, as ZATCA monitors cancellation rates.</div></div>
         </div>
 
       </div>
-      <div class="page-nav"><a href="quotations.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Quotations</span></a><a href="payments.html" class="page-nav-next"><span>Payments</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="quotations.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Quotations</span></a><a href="payments.html" class="page-nav-next"><span>Payments Received</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

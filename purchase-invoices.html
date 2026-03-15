@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,27 +24,42 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -52,7 +68,13 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Purchasing</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Purchase Invoices</span></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Purchasing</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">Purchase Invoices</span>
+      </div>
       <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
@@ -60,57 +82,69 @@
 
         <div class="page-hero">
           <h1>Purchase Invoices</h1>
-          <p>Record bills you receive from suppliers. This tracks what you owe and lets you claim back the VAT you paid.</p>
+          <p>Record bills you receive from suppliers. Purchase invoices track what you owe, allow VAT input credit claims, and feed into your financial reports.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Purchase invoices list</h2>
-        <div class="screenshot">
-          <div class="ss-bar">
-            <div class="ss-dot" style="background:#fe5f57"></div>
-            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
-            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
-            <div class="ss-url">yourcompany.fateherp.com</div>
-          </div>
-          <img class="ss-img" src="assets/img/screens/13-purchase-invoices.jpg" alt="Purchase Invoices list"/>
-          <div class="ss-caption">Purchase Invoices list</div>
-        </div>
+          <h2>Purchase Invoices list</h2>
+          <p>Go to <strong>Buying → Purchase Invoice</strong>:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/06-purchase-invoices-list.jpg" alt="Purchase Invoices list — all bills from suppliers"/>
+  <div class="ss-caption">Purchase Invoices list — all bills from suppliers</div>
+</div>
+          <p>The list shows: bill number, supplier, date, total, outstanding amount, and status.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Recording a purchase invoice</h2>
-          <p>Click <strong>+ New Purchase Invoice</strong> and fill in the details from the supplier's bill:</p>
+          <h2>Creating a new purchase invoice</h2>
+          <p>Click <strong>+ New Purchase Invoice</strong>:</p>
           <div class="steps">
-            <div class="step"><div class="step-num">1</div><div class="step-content">
-              <h4>Select the supplier</h4>
-              <p>Pick the supplier from the list. If they're new, add them in the Suppliers section first.</p>
-            </div></div>
-            <div class="step"><div class="step-num">2</div><div class="step-content">
-              <h4>Enter the supplier's invoice number</h4>
-              <p>This is the reference number printed on the paper invoice you received from the supplier.</p>
-            </div></div>
-            <div class="step"><div class="step-num">3</div><div class="step-content">
-              <h4>Set the invoice date</h4>
-              <p>Use the date shown on the supplier's invoice, not today's date.</p>
-            </div></div>
-            <div class="step"><div class="step-num">4</div><div class="step-content">
-              <h4>Add items and amounts</h4>
-              <p>Enter what you purchased and the amounts from the bill. Tick <strong>Apply VAT</strong> if the supplier charged VAT — this gets recorded as input VAT you can claim back.</p>
-            </div></div>
-            <div class="step"><div class="step-num">5</div><div class="step-content">
-              <h4>Save</h4>
-              <p>The amount is now shown as payable to the supplier.</p>
-            </div></div>
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Supplier</h4><p>Select the supplier from the dropdown.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Supplier Invoice No.</h4><p>Enter the invoice number from the supplier's paper or PDF invoice. This links your record to their document.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Posting Date</h4><p>The date on the supplier's invoice (not today unless they match).</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Due Date</h4><p>Payment deadline based on agreed payment terms.</p></div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Add Items</h4><p>In the Items table, add what you purchased: item, quantity, and rate from the supplier's invoice.</p></div></div>
+            <div class="step"><div class="step-num">6</div><div class="step-content"><h4>Taxes</h4><p>Enter the VAT shown on the supplier's invoice. This is your <strong>input VAT</strong> and is recoverable on your VAT return.</p></div></div>
+            <div class="step"><div class="step-num">7</div><div class="step-content"><h4>Submit</h4><p>Click Submit. The payable is recorded in your accounts.</p></div></div>
           </div>
         </div>
 
-        <div class="callout callout-info">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <div>The VAT you record on purchase invoices reduces the VAT you owe to ZATCA. Always enter supplier invoices with the correct VAT number.</div>
+        <div class="doc-section">
+          <h2>Purchase invoices with data</h2>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/06e-purchase-list-with-data.jpg" alt="Purchase invoices list showing recorded supplier bills"/>
+  <div class="ss-caption">Purchase invoices list showing recorded supplier bills</div>
+</div>
         </div>
+
+        <div class="doc-section">
+          <h2>Paying a purchase invoice</h2>
+          <p>When you're ready to pay:</p>
+          <ol>
+            <li>Open the purchase invoice</li>
+            <li>Click <strong>Make Payment</strong></li>
+            <li>Select the bank account you're paying from</li>
+            <li>Enter the payment amount and reference number</li>
+            <li>Submit — the payable balance decreases</li>
+          </ol>
+        </div>
+
+        <div class="callout callout-info"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div>Purchase invoices are separate from supplier payments. You must create both: the invoice (records the liability) and the payment (settles it). This two-step process gives you accurate accounts payable at all times.</div></div>
 
       </div>
-      <div class="page-nav"><a href="suppliers.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Suppliers</span></a><a href="items.html" class="page-nav-next"><span>Items</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="suppliers.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Suppliers</span></a><a href="supplier-payments.html" class="page-nav-next"><span>Supplier Payments</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

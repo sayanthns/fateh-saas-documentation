@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Payments — Fateh ERP Docs</title>
+  <title>Payments Received — Fateh ERP Docs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/docs.css"/>
@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,27 +24,42 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -52,66 +68,90 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Sales</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Payments</span></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Sales</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">Payments Received</span>
+      </div>
       <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
-          <h1>Payments</h1>
-          <p>Record when a customer pays an invoice. This keeps your outstanding balances accurate and your books clean.</p>
+          <h1>Payments Received</h1>
+          <p>Record payments from customers and match them against outstanding invoices to keep your accounts up to date.</p>
         </div>
 
         <div class="doc-section">
           <h2>Payments list</h2>
-          <p>Click <strong>Payments</strong> in the left menu to see all received payments.</p>
-        <div class="screenshot">
-          <div class="ss-bar">
-            <div class="ss-dot" style="background:#fe5f57"></div>
-            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
-            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
-            <div class="ss-url">yourcompany.fateherp.com</div>
-          </div>
-          <img class="ss-img" src="assets/img/screens/09-payments-list.jpg" alt="Payments list — all customer payments recorded"/>
-          <div class="ss-caption">Payments list — all customer payments recorded</div>
-        </div>
+          <p>Go to <strong>Accounts → Payment Entry</strong> (or <strong>Selling → Payments</strong>):</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/09-payments-list.jpg" alt="Payments list — all customer payments received"/>
+  <div class="ss-caption">Payments list — all customer payments received</div>
+</div>
+          <p>Each row shows: payment number, customer, date, amount, mode of payment, and whether it is reconciled against an invoice.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Recording a payment</h2>
-          <p>The easiest way is directly from the invoice:</p>
+          <h2>Recording a payment against an invoice</h2>
+          <p>The fastest way is directly from the invoice:</p>
           <div class="steps">
-            <div class="step"><div class="step-num">1</div><div class="step-content">
-              <h4>Open the invoice</h4>
-              <p>Go to <strong>Invoices</strong>, find the invoice that was paid, and click on it to open it.</p>
-            </div></div>
-            <div class="step"><div class="step-num">2</div><div class="step-content">
-              <h4>Click "Record Payment"</h4>
-              <p>A payment entry opens with the customer name and amount already filled in.</p>
-            </div></div>
-            <div class="step"><div class="step-num">3</div><div class="step-content">
-              <h4>Choose how they paid</h4>
-              <p>Select the <strong>payment mode</strong>: Bank Transfer, Cash, Cheque, or Credit Card.</p>
-            </div></div>
-            <div class="step"><div class="step-num">4</div><div class="step-content">
-              <h4>Add reference (optional)</h4>
-              <p>For bank transfers, enter the bank transaction reference number. This helps you match payments later.</p>
-            </div></div>
-            <div class="step"><div class="step-num">5</div><div class="step-content">
-              <h4>Save</h4>
-              <p>Click <strong>Save</strong>. The invoice status changes to <strong>Paid</strong> and the customer's outstanding balance decreases.</p>
-            </div></div>
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Open the invoice</h4><p>Go to Sales Invoices, find the unpaid invoice, and open it.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Click 'Make Payment'</h4><p>At the top of the submitted invoice click <strong>Make Payment</strong>. A payment entry form opens pre-filled with the customer and outstanding amount.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Mode of Payment</h4><p>Select how the customer paid: <strong>Bank Transfer</strong>, <strong>Cash</strong>, <strong>Cheque</strong>, or <strong>Credit Card</strong>.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Bank Account</h4><p>Select the bank account that received the money.</p></div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Reference Number</h4><p>Enter the bank reference, cheque number, or transfer ID. This is important for bank reconciliation.</p></div></div>
+            <div class="step"><div class="step-num">6</div><div class="step-content"><h4>Payment Date</h4><p>When the money was actually received. Important for cash flow reporting.</p></div></div>
+            <div class="step"><div class="step-num">7</div><div class="step-content"><h4>Click Save then Submit</h4><p>The payment is recorded and the invoice status changes to <strong>Paid</strong>.</p></div></div>
           </div>
         </div>
 
         <div class="doc-section">
-          <h2>Partial payment</h2>
-          <p>If a customer pays only part of the invoice, change the <strong>Amount</strong> to what they actually paid. The invoice will show as <strong>Partly Paid</strong>. Record another payment when they pay the rest.</p>
+          <h2>Creating a standalone payment</h2>
+          <p>You can also record a payment without starting from an invoice:</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Click + New Payment Entry</h4><p>From the Payments list, click the New button.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Payment Type</h4><p>Select <strong>Receive</strong> (money coming in from a customer).</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Party Type → Customer</h4><p>Select <em>Customer</em> as the party type.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Party</h4><p>Select the customer from the dropdown.</p></div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Amount</h4><p>Enter the payment amount.</p></div></div>
+            <div class="step"><div class="step-num">6</div><div class="step-content"><h4>Allocate to invoices</h4><p>In the <strong>Outstanding Invoices</strong> table at the bottom, tick the invoice(s) this payment covers. Click <strong>Allocate</strong>.</p></div></div>
+            <div class="step"><div class="step-num">7</div><div class="step-content"><h4>Submit</h4><p>Click Submit to finalise the payment.</p></div></div>
+          </div>
         </div>
+
+        <div class="doc-section">
+          <h2>Unallocated payments</h2>
+          <p>If a customer pays in advance before an invoice exists, record the payment and leave it unallocated. When you later create the invoice, go to <strong>Make Payment</strong> from the invoice and Fateh will show the existing unallocated amount to apply.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2>Payment modes</h2>
+          <table class="data-table">
+            <thead><tr><th>Mode</th><th>When to use</th></tr></thead>
+            <tbody>
+              <tr><td>Bank Transfer (SADAD / IBAN)</td><td>Most common — wire transfers from customer</td></tr>
+              <tr><td>Cash</td><td>Physical cash received at your office</td></tr>
+              <tr><td>Cheque</td><td>Paper cheques — enter cheque number as reference</td></tr>
+              <tr><td>Credit Card</td><td>Card payments through a POS terminal</td></tr>
+              <tr><td>STC Pay / Mada</td><td>Add custom payment modes in Settings if needed</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout-info"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div>After entering all payments, run the <strong>Bank Reconciliation</strong> report (Accounts → Bank Reconciliation) to match your bank statement against Fateh records. Any gaps indicate missing payment entries.</div></div>
 
       </div>
-      <div class="page-nav"><a href="sales-invoices.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Sales Invoices</span></a><a href="suppliers.html" class="page-nav-next"><span>Suppliers</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="sales-invoices.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Sales Invoices</span></a><a href="sales-orders.html" class="page-nav-next"><span>Sales Orders</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

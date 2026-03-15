@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VAT — Fateh ERP Docs</title>
+  <title>Chart of Accounts — Fateh ERP Docs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/docs.css"/>
@@ -71,9 +71,9 @@
       <div class="topbar-breadcrumb">
         <span>Docs</span>
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-        <span>Compliance</span>
+        <span>Accounting</span>
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-        <span class="active">VAT</span>
+        <span class="active">Chart of Accounts</span>
       </div>
       <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
@@ -81,62 +81,62 @@
       <div class="content-inner">
 
         <div class="page-hero">
-          <h1>VAT (Value Added Tax)</h1>
-          <p>Fateh ERP handles Saudi Arabia VAT automatically. Here's how it works and what you need to know.</p>
+          <h1>Chart of Accounts</h1>
+          <p>The chart of accounts is the backbone of your accounting. It lists every account used to record financial transactions.</p>
         </div>
 
-        <div class="callout callout-info"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><div>Saudi Arabia's standard VAT rate is <strong>15%</strong>. All VAT-registered businesses must apply this to most goods and services.</div></div>
-
         <div class="doc-section">
-          <h2>How VAT works in Fateh</h2>
-          <p>Fateh ERP separates your transactions into:</p>
+          <h2>Viewing the chart of accounts</h2>
+          <p>Go to <strong>Accounts → Chart of Accounts</strong>:</p>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/14-chart-of-accounts.jpg" alt="Chart of Accounts — tree view of all accounts"/>
+  <div class="ss-caption">Chart of Accounts — tree view of all accounts</div>
+</div>
+          <p>The chart is arranged as a tree:</p>
           <table class="data-table">
-            <thead><tr><th>Type</th><th>Description</th><th>Where it appears</th></tr></thead>
+            <thead><tr><th>Root Type</th><th>What's in it</th></tr></thead>
             <tbody>
-              <tr><td><strong>Output VAT</strong></td><td>VAT you charge customers (collect on their behalf for ZATCA)</td><td>Sales Invoices</td></tr>
-              <tr><td><strong>Input VAT</strong></td><td>VAT you pay to suppliers (you can claim this back)</td><td>Purchase Invoices</td></tr>
-              <tr><td><strong>Net VAT payable</strong></td><td>Output VAT minus Input VAT = what you pay to ZATCA</td><td>VAT Return report</td></tr>
+              <tr><td><strong>Assets</strong></td><td>Bank accounts, debtors (receivables), fixed assets, stock</td></tr>
+              <tr><td><strong>Liabilities</strong></td><td>Creditors (payables), VAT payable, loans</td></tr>
+              <tr><td><strong>Income</strong></td><td>Sales revenue, other income</td></tr>
+              <tr><td><strong>Expenses</strong></td><td>Cost of goods, salaries, rent, utilities</td></tr>
+              <tr><td><strong>Equity</strong></td><td>Share capital, retained earnings</td></tr>
             </tbody>
           </table>
+          <div class="screenshot">
+  <div class="ss-bar">
+    <div class="ss-dot" style="background:#fe5f57"></div>
+    <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+    <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+    <div class="ss-url">yourcompany.fateherp.com</div>
+  </div>
+  <img class="ss-img" src="assets/img/screens/14-chart-of-accounts-full.jpg" alt="Chart of Accounts — expanded showing all accounts and balances"/>
+  <div class="ss-caption">Chart of Accounts — expanded showing all accounts and balances</div>
+</div>
         </div>
 
         <div class="doc-section">
-          <h2>Setting up VAT on items</h2>
-          <p>To make VAT appear automatically on invoices:</p>
+          <h2>Adding a new account</h2>
           <div class="steps">
-            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Open an Item</h4><p>Go to Stock → Items and open any item.</p></div></div>
-            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Taxes tab</h4><p>Click the <strong>Taxes</strong> tab on the item form.</p></div></div>
-            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Add Tax Template</h4><p>Click Add Row and select <em>KSA VAT 15%</em> (or the tax template your accountant set up).</p></div></div>
-            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Save</h4><p>Now every time this item is added to an invoice, 15% VAT is calculated automatically.</p></div></div>
+            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Find the parent account</h4><p>Expand the tree to find where your new account belongs (e.g., under <em>Expenses → Office Expenses</em>).</p></div></div>
+            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Click + Add Child Account</h4><p>A dialog appears.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Account Name</h4><p>Enter a clear name like <em>Office Stationery</em> or <em>Travel Allowance</em>.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Account Type</h4><p>Choose the type that matches: <em>Expense</em>, <em>Income</em>, <em>Payable</em>, <em>Receivable</em>, etc.</p></div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Is Group?</h4><p>Leave unticked unless this account is a parent folder for sub-accounts.</p></div></div>
+            <div class="step"><div class="step-num">6</div><div class="step-content"><h4>Save</h4><p>The new account appears in the tree and is immediately available for journal entries and expense entries.</p></div></div>
           </div>
         </div>
 
-        <div class="doc-section">
-          <h2>Generating a VAT return</h2>
-          <p>At the end of each VAT filing period (quarterly for most businesses):</p>
-          <div class="steps">
-            <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Go to Reports → VAT Audit Report</h4><p>This shows all sales and purchase invoices with their VAT amounts for the period.</p></div></div>
-            <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Set the date range</h4><p>Select the start and end date of your VAT period.</p></div></div>
-            <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Review the summary</h4><p>Check: Total Output VAT (from sales), Total Input VAT (from purchases), Net VAT payable.</p></div></div>
-            <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Export</h4><p>Download the report as Excel or PDF to prepare your ZATCA VAT return filing.</p></div></div>
-          </div>
-        </div>
-
-        <div class="doc-section">
-          <h2>Zero-rated and exempt items</h2>
-          <table class="data-table">
-            <thead><tr><th>Category</th><th>VAT Rate</th><th>Examples</th></tr></thead>
-            <tbody>
-              <tr><td>Standard rated</td><td>15%</td><td>Most goods &amp; services</td></tr>
-              <tr><td>Zero-rated</td><td>0%</td><td>Exports, international transport, certain medicines</td></tr>
-              <tr><td>Exempt</td><td>No VAT</td><td>Residential property rental, certain financial services</td></tr>
-            </tbody>
-          </table>
-          <p>For zero-rated exports, use a separate tax template <em>KSA VAT 0%</em> on those items.</p>
-        </div>
+        <div class="callout callout-warning"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><div>Fateh comes with a pre-built Saudi Arabia chart of accounts. Only add or modify accounts if you understand double-entry accounting, or ask your accountant first.</div></div>
 
       </div>
-<div class="page-nav"><a href="expense-entries.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Expense Entries</span></a><a href="zatca.html" class="page-nav-next"><span>ZATCA (e-Invoicing)</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="supplier-payments.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Supplier Payments</span></a><a href="journal-entries.html" class="page-nav-next"><span>Journal Entries</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

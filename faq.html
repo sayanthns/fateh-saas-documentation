@@ -13,6 +13,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="index.html" class="sidebar-logo"><img src="assets/img/fateh-logo.jpg" alt="Fateh ERP" class="logo-img"/></a>
+      <button class="sidebar-toggle" id="sidebarToggle"></button>
     </div>
     <div class="sidebar-search">
       <input type="search" placeholder="Search docs…" id="docsSearch" autocomplete="off"/>
@@ -23,27 +24,42 @@
         <a href="index.html" class="nav-link">Welcome</a>
         <a href="quickstart.html" class="nav-link">Quick Start</a>
         <a href="first-login.html" class="nav-link">First Login</a>
-        <a href="navigation.html" class="nav-link">Navigation</a>
+        <a href="navigation.html" class="nav-link">Dashboard &amp; Navigation</a>
+      </div>
+      <div class="nav-group"><span class="nav-group-label">Inventory</span>
+        <a href="items.html" class="nav-link">Items (Products &amp; Services)</a>
+        <a href="stock.html" class="nav-link">Stock &amp; Warehouses</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Sales</span>
         <a href="customers.html" class="nav-link">Customers</a>
         <a href="quotations.html" class="nav-link">Quotations</a>
         <a href="sales-invoices.html" class="nav-link">Sales Invoices</a>
-        <a href="payments.html" class="nav-link">Payments</a>
+        <a href="payments.html" class="nav-link">Payments Received</a>
+        <a href="sales-orders.html" class="nav-link">Sales Orders</a>
+        <a href="pos.html" class="nav-link">Point of Sale (POS)</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Purchasing</span>
         <a href="suppliers.html" class="nav-link">Suppliers</a>
         <a href="purchase-invoices.html" class="nav-link">Purchase Invoices</a>
+        <a href="supplier-payments.html" class="nav-link">Supplier Payments</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Inventory</span>
-        <a href="items.html" class="nav-link">Items</a>
+      <div class="nav-group"><span class="nav-group-label">Accounting</span>
+        <a href="chart-of-accounts.html" class="nav-link">Chart of Accounts</a>
+        <a href="journal-entries.html" class="nav-link">Journal Entries</a>
+        <a href="expense-entries.html" class="nav-link">Expense Entries</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
+      <div class="nav-group"><span class="nav-group-label">Reports</span>
+        <a href="reports.html" class="nav-link">Reports Overview</a>
+        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
+        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
+      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -52,7 +68,13 @@
   <div class="main-wrapper">
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-      <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Help</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">FAQ</span></div>
+      <div class="topbar-breadcrumb">
+        <span>Docs</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Help</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="active">FAQ</span>
+      </div>
       <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
@@ -60,60 +82,82 @@
 
         <div class="page-hero">
           <h1>Frequently Asked Questions</h1>
-          <p>Quick answers to common questions.</p>
+          <p>Quick answers to the most common questions about using Fateh ERP.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Login & Account</h2>
+          <h2>Invoices &amp; Payments</h2>
 
-          <h3>I forgot my password. How do I reset it?</h3>
-          <p>Click <strong>Forgot password?</strong> on the login screen, enter your email, and check your inbox for a reset link. If you don't receive it within 5 minutes, check your spam folder or contact <a href="mailto:support@fateherp.com">support@fateherp.com</a>.</p>
+          <details class="faq-item">
+            <summary>Can I edit an invoice after submitting it?</summary>
+            <p>No — once submitted, an invoice is locked. To make corrections, open the invoice, click <strong>Cancel</strong>, then click <strong>Amend</strong>. An editable copy is created. Make your changes and re-submit. A cancellation is also sent to ZATCA if the invoice was already submitted there.</p>
+          </details>
 
-          <h3>Can I have more than one user on my account?</h3>
-          <p>Yes. Ask your Fateh account manager or email support to add extra users. Each user has their own login credentials.</p>
+          <details class="faq-item">
+            <summary>How do I record a partial payment?</summary>
+            <p>Click <strong>Make Payment</strong> on the invoice and enter the amount received (less than the full invoice total). The invoice status changes to <em>Partly Paid</em>. When the remaining amount comes in, create another payment from the same invoice.</p>
+          </details>
 
-          <h3>Can I use Fateh ERP on my phone?</h3>
-          <p>Yes. Open your browser on any phone or tablet and go to your Fateh ERP link. The interface adjusts to fit smaller screens automatically.</p>
+          <details class="faq-item">
+            <summary>Why is my invoice showing "Unpaid" after I entered a payment?</summary>
+            <p>Make sure the payment was <strong>submitted</strong> (not just saved). Also check that the payment is <strong>linked to the correct invoice</strong> — open the payment entry and confirm the invoice number appears in the "Outstanding Invoices" table at the bottom.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I create a credit note?</summary>
+            <p>Open the original sales invoice and click <strong>Make → Return / Credit Note</strong>. Fateh creates a negative invoice (credit note) linked to the original. This reverses the revenue and adjusts the customer's outstanding balance.</p>
+          </details>
         </div>
 
         <div class="doc-section">
-          <h2>Invoices & Payments</h2>
+          <h2>ZATCA &amp; VAT</h2>
 
-          <h3>Can I edit an invoice after I've submitted it?</h3>
-          <p>No. Once submitted, an invoice is final (this is a ZATCA requirement). If you made a mistake, cancel the invoice and create a new one with the correct details.</p>
+          <details class="faq-item">
+            <summary>My invoice shows "ZATCA Rejected" — what do I do?</summary>
+            <p>Check the error message on the invoice (hover or click the status badge). Common reasons: missing customer VAT number, item code format issue, or connection timeout. Fix the issue, cancel the invoice, create an amendment, and re-submit.</p>
+          </details>
 
-          <h3>A customer overpaid — what do I do?</h3>
-          <p>Record the full amount they paid. The extra amount will show as a credit on their account, which can be applied to their next invoice. Contact support if you need help with this.</p>
+          <details class="faq-item">
+            <summary>Do I need to do anything to enable ZATCA?</summary>
+            <p>Your Fateh administrator needs to enter your ZATCA credentials (Production/Integration CSID) in Settings → ZATCA Configuration once during setup. After that, ZATCA submission is fully automatic.</p>
+          </details>
 
-          <h3>How do I issue a refund or credit note?</h3>
-          <p>Open the original invoice and look for the <strong>Return / Credit Note</strong> option. This creates a credit note that reverses the original invoice (fully or partially).</p>
-
-          <h3>My invoice shows "Overdue" — what does that mean?</h3>
-          <p>The due date on the invoice has passed and the customer hasn't paid yet. Follow up with the customer. Once they pay, record the payment and the invoice will move to Paid.</p>
+          <details class="faq-item">
+            <summary>How do I generate my quarterly VAT return?</summary>
+            <p>Go to <strong>Reports → VAT Audit Report</strong>. Set the date range to your VAT period. The report shows total output VAT, total input VAT, and net VAT payable. Export to Excel and use these figures to fill in your ZATCA VAT return portal submission.</p>
+          </details>
         </div>
 
         <div class="doc-section">
-          <h2>Items & Stock</h2>
+          <h2>Items &amp; Stock</h2>
 
-          <h3>I added an item but can't find it in the invoice dropdown</h3>
-          <p>Make sure the item is saved (not just a draft). Go to <strong>Items</strong> and confirm it appears in the list. Then try creating the invoice again.</p>
+          <details class="faq-item">
+            <summary>My item doesn't appear in the invoice dropdown — why?</summary>
+            <p>Make sure the item is <strong>not disabled</strong>. Open the item and check if the <em>Disabled</em> checkbox is ticked. If it is, untick it and save.</p>
+          </details>
 
-          <h3>Do I have to use Items? Can I just type a description on the invoice?</h3>
-          <p>You need to select items from your items list. If you have a one-off service, create a generic item like "Professional Services" and change the description and amount each time.</p>
+          <details class="faq-item">
+            <summary>How do I import a large number of items at once?</summary>
+            <p>Go to <strong>Data Import</strong> (search for it in the top bar). Select <em>Items</em> as the document type. Download the template, fill it in Excel, and upload it. Fateh will create all items in one go.</p>
+          </details>
         </div>
 
         <div class="doc-section">
-          <h2>VAT & ZATCA</h2>
+          <h2>Users &amp; Access</h2>
 
-          <h3>I don't see a ZATCA status on my invoice</h3>
-          <p>Make sure you clicked <strong>Submit</strong> (not just Save as Draft). Draft invoices are not sent to ZATCA. Only submitted invoices are cleared.</p>
+          <details class="faq-item">
+            <summary>How do I add a new user?</summary>
+            <p>Go to <strong>Settings → User List → New User</strong>. Enter their email, name, and assign a role (e.g., <em>Sales User</em>, <em>Accounts User</em>). They'll receive an email invitation to set their password.</p>
+          </details>
 
-          <h3>Do I need to file my VAT return through Fateh?</h3>
-          <p>Fateh ERP records all your VAT data. However, you (or your accountant) still need to log into the ZATCA portal to submit the actual VAT return and pay the amount due each quarter.</p>
+          <details class="faq-item">
+            <summary>How do I reset a user's password?</summary>
+            <p>Go to <strong>Settings → User List</strong>, open the user, and click <strong>Send Password Reset Email</strong>. The user receives a link to set a new password.</p>
+          </details>
         </div>
 
       </div>
-      <div class="page-nav"><a href="zatca.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>ZATCA</span></a><a href="support.html" class="page-nav-next"><span>Contact Support</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+<div class="page-nav"><a href="reports.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Reports</span></a><a href="support.html" class="page-nav-next"><span>Contact Support</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>
