@@ -37,20 +37,13 @@
       </div>
       <div class="nav-group"><span class="nav-group-label">Inventory</span>
         <a href="items.html" class="nav-link">Items</a>
-        <a href="stock.html" class="nav-link">Stock</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Reports</span>
-        <a href="reports.html" class="nav-link">Reports Overview</a>
-        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
-        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
-      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -60,63 +53,74 @@
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Sales</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Customers</span></div>
-      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+      <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
           <h1>Customers</h1>
-          <p>Add and manage your customers. Each customer holds contact details, VAT number, and outstanding balance history.</p>
+          <p>Add the companies and individuals you sell to. You need to add a customer before you can create an invoice or quotation for them.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Adding a New Customer</h2>
+          <h2>Viewing your customers</h2>
+          <p>Go to <strong>Customers</strong> in the left menu. You'll see a list of all your customers with their type, VAT number, and outstanding balance.</p>
+        <div class="screenshot">
+          <div class="ss-bar">
+            <div class="ss-dot" style="background:#fe5f57"></div>
+            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+            <div class="ss-url">yourcompany.fateherp.com</div>
+          </div>
+          <img class="ss-img" src="assets/img/screens/03-customers-list.jpg" alt="The Customers list — all your customers in one place"/>
+          <div class="ss-caption">The Customers list — all your customers in one place</div>
+        </div>
+        </div>
+
+        <div class="doc-section">
+          <h2>Adding a new customer</h2>
+          <p>Click the <strong>+ New Customer</strong> button at the top right. A form appears:</p>
+        <div class="screenshot">
+          <div class="ss-bar">
+            <div class="ss-dot" style="background:#fe5f57"></div>
+            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+            <div class="ss-url">yourcompany.fateherp.com</div>
+          </div>
+          <img class="ss-img" src="assets/img/screens/04-new-customer.jpg" alt="New Customer form — fill in name, type, and VAT number"/>
+          <div class="ss-caption">New Customer form — fill in name, type, and VAT number</div>
+        </div>
           <div class="steps">
             <div class="step"><div class="step-num">1</div><div class="step-content">
-              <h4>Open Customers</h4>
-              <p>Go to <strong>Selling → Customers</strong>, then click <strong>New</strong>.</p>
+              <h4>Customer Name</h4>
+              <p>Enter the full name of the company or person. Example: <em>Al Noor Trading Co.</em></p>
             </div></div>
             <div class="step"><div class="step-num">2</div><div class="step-content">
-              <h4>Fill in details</h4>
-              <p>Enter the <strong>Customer Name</strong>, <strong>Customer Type</strong> (Company or Individual), and <strong>Customer Group</strong>. For B2B customers, add the VAT registration number.</p>
+              <h4>Type</h4>
+              <p>Choose <strong>Company</strong> if you're selling to a business, or <strong>Individual</strong> for a person.</p>
             </div></div>
             <div class="step"><div class="step-num">3</div><div class="step-content">
-              <h4>Add contact & address</h4>
-              <p>In the <strong>Contacts</strong> section, click <strong>New Contact</strong>. Add the contact person's name, phone, and email. In the <strong>Addresses</strong> section, add the billing address (including country).</p>
+              <h4>VAT Registration No.</h4>
+              <p>If this customer is VAT-registered in Saudi Arabia, enter their 15-digit VAT number here. This is required for B2B invoices submitted to ZATCA.</p>
             </div></div>
             <div class="step"><div class="step-num">4</div><div class="step-content">
-              <h4>Save</h4>
-              <p>Click <strong>Save</strong>. The customer is now available in all sales forms.</p>
+              <h4>Click Create Customer</h4>
+              <p>The customer is saved and ready to use in invoices and quotations.</p>
             </div></div>
           </div>
         </div>
 
         <div class="doc-section">
-          <h2>Key Fields Explained</h2>
-          <table class="doc-table">
-            <thead><tr><th>Field</th><th>Description</th><th>Required?</th></tr></thead>
-            <tbody>
-              <tr><td>Customer Name</td><td>Full legal name of the customer</td><td>✅ Yes</td></tr>
-              <tr><td>Customer Type</td><td>Company or Individual</td><td>✅ Yes</td></tr>
-              <tr><td>Customer Group</td><td>Classify customers (e.g., Retail, Wholesale, Government)</td><td>✅ Yes</td></tr>
-              <tr><td>Tax ID (VAT No.)</td><td>15-digit Saudi VAT number — required for B2B ZATCA invoices</td><td>For B2B</td></tr>
-              <tr><td>Territory</td><td>Geographic region for sales analytics</td><td>No</td></tr>
-              <tr><td>Credit Limit</td><td>Maximum outstanding amount allowed</td><td>No</td></tr>
-            </tbody>
-          </table>
+          <h2>Outstanding balance</h2>
+          <p>The <strong>Outstanding</strong> column shows how much each customer still owes you (total unpaid invoices). When you record a payment, this number goes down automatically.</p>
         </div>
 
-        <div class="doc-section">
-          <h2>Viewing Outstanding Balance</h2>
-          <p>Open any Customer and scroll to the <strong>Accounts</strong> section. You'll see the <strong>Outstanding Amount</strong> — the total unpaid invoices for this customer. Click it to see a detailed breakdown.</p>
+        <div class="callout callout-info">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>You can also add a new customer on-the-fly when creating an invoice — just click the <strong>+</strong> button next to the Customer field.</div>
         </div>
 
-        <div class="doc-section">
-          <h2>Importing Customers</h2>
-          <p>To import multiple customers at once, go to <strong>Settings → Data Import → Import Customer</strong>. Download the CSV template, fill in your customers, and upload it. Fateh will validate and import all rows.</p>
-        </div>
-    
       </div>
       <div class="page-nav"><a href="navigation.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Navigation</span></a><a href="quotations.html" class="page-nav-next"><span>Quotations</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>

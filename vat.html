@@ -37,20 +37,13 @@
       </div>
       <div class="nav-group"><span class="nav-group-label">Inventory</span>
         <a href="items.html" class="nav-link">Items</a>
-        <a href="stock.html" class="nav-link">Stock</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Reports</span>
-        <a href="reports.html" class="nav-link">Reports Overview</a>
-        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
-        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
-      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -60,67 +53,51 @@
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Compliance</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">VAT</span></div>
-      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+      <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
           <h1>VAT</h1>
-          <p>Fateh ERP handles Saudi Arabia's 15% VAT automatically. Understand how VAT is applied and how to file your VAT return.</p>
+          <p>Fateh ERP handles Saudi Arabia's 15% VAT automatically. Here's what you need to know.</p>
         </div>
 
         <div class="doc-section">
-          <h2>How VAT Works in Fateh ERP</h2>
-          <p>When you add an item to a Sales Invoice with a <strong>VAT 15% tax template</strong>, Fateh automatically:</p>
+          <h2>How VAT works in Fateh ERP</h2>
+          <p>When you create a sales invoice and tick <strong>Apply VAT (15%)</strong>:</p>
           <ul>
-            <li>Calculates 15% of the net amount</li>
-            <li>Adds it to the invoice total</li>
-            <li>Posts the VAT amount to the <strong>Output VAT</strong> ledger</li>
-            <li>Includes the VAT breakdown in the ZATCA XML</li>
+            <li>Fateh automatically adds 15% VAT on top of the net amount</li>
+            <li>The invoice shows the subtotal, VAT amount, and grand total separately</li>
+            <li>The VAT is recorded in your accounts and included in the ZATCA submission</li>
           </ul>
+          <p>You don't need to calculate anything — just tick the box and Fateh does the rest.</p>
         </div>
 
         <div class="doc-section">
-          <h2>VAT Categories</h2>
+          <h2>When to apply VAT</h2>
           <table class="doc-table">
-            <thead><tr><th>Category</th><th>Rate</th><th>Example</th></tr></thead>
+            <thead><tr><th>Situation</th><th>VAT rate</th></tr></thead>
             <tbody>
-              <tr><td>Standard Rate</td><td>15%</td><td>Most goods and services</td></tr>
-              <tr><td>Zero-Rated</td><td>0%</td><td>Exports, international transport, certain medicines</td></tr>
-              <tr><td>Exempt</td><td>—</td><td>Residential real estate, certain financial services</td></tr>
+              <tr><td>Most goods and services sold inside Saudi Arabia</td><td><strong>15%</strong></td></tr>
+              <tr><td>Exports outside Saudi Arabia</td><td><strong>0%</strong> (Zero-rated)</td></tr>
+              <tr><td>Certain services (e.g., some financial, residential property)</td><td><strong>Exempt</strong></td></tr>
             </tbody>
           </table>
+          <div class="callout callout-warning">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <div>If you're not sure whether your service is standard, zero-rated, or exempt, consult your accountant or ZATCA's official guidelines.</div>
+          </div>
         </div>
 
         <div class="doc-section">
-          <h2>Preparing Your VAT Return</h2>
-          <div class="steps">
-            <div class="step"><div class="step-num">1</div><div class="step-content">
-              <h4>Go to Accounts → VAT Return</h4>
-              <p>Select the VAT return period (quarterly or monthly, depending on your ZATCA filing frequency).</p>
-            </div></div>
-            <div class="step"><div class="step-num">2</div><div class="step-content">
-              <h4>Review output VAT</h4>
-              <p>This is the VAT you collected on all your Sales Invoices during the period.</p>
-            </div></div>
-            <div class="step"><div class="step-num">3</div><div class="step-content">
-              <h4>Review input VAT</h4>
-              <p>This is the VAT you paid on your Purchase Invoices — the amount you can deduct.</p>
-            </div></div>
-            <div class="step"><div class="step-num">4</div><div class="step-content">
-              <h4>Net VAT payable = Output VAT − Input VAT</h4>
-              <p>If positive, you owe this to ZATCA. If negative, you have a VAT credit.</p>
-            </div></div>
-          </div>
-          <div class="callout callout-info">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            <div>Fateh ERP generates the VAT Return report but you still need to log into the ZATCA portal to submit and pay the return manually (or through your accountant).</div>
-          </div>
+          <h2>Input VAT (VAT you can claim back)</h2>
+          <p>When you receive a purchase invoice from a supplier and record it in Fateh ERP with VAT, that VAT amount is recorded as <strong>Input VAT</strong>. This reduces the VAT you owe to ZATCA at the end of the quarter.</p>
+          <p>Example: You collected SAR 15,000 VAT from customers, and paid SAR 3,000 VAT to suppliers. You owe ZATCA SAR 12,000.</p>
         </div>
-    
+
       </div>
-      <div class="page-nav"><a href="stock.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Stock</span></a><a href="zatca.html" class="page-nav-next"><span>ZATCA</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+      <div class="page-nav"><a href="items.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Items</span></a><a href="zatca.html" class="page-nav-next"><span>ZATCA</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

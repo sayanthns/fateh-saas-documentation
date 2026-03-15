@@ -37,20 +37,13 @@
       </div>
       <div class="nav-group"><span class="nav-group-label">Inventory</span>
         <a href="items.html" class="nav-link">Items</a>
-        <a href="stock.html" class="nav-link">Stock</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Reports</span>
-        <a href="reports.html" class="nav-link">Reports Overview</a>
-        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
-        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
-      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -60,69 +53,53 @@
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Getting Started</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Navigation</span></div>
-      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+      <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
           <h1>Navigation</h1>
-          <p>Learn how to move around Fateh ERP — the workspace, modules, search, and shortcuts.</p>
+          <p>Learn how to move around Fateh ERP quickly.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Home Workspace</h2>
-          <p>After logging in, you land on the <strong>Home</strong> workspace. It contains shortcut cards for every module:</p>
+          <h2>Your Dashboard</h2>
+          <p>The Dashboard is the home screen. It shows you:</p>
           <ul>
-            <li><strong>Selling</strong> — Customers, Quotations, Sales Orders, Sales Invoices</li>
-            <li><strong>Buying</strong> — Suppliers, Purchase Orders, Purchase Invoices</li>
-            <li><strong>Accounting</strong> — Journal Entries, Payment Entries, Reports</li>
-            <li><strong>Stock</strong> — Items, Warehouses, Stock Entries</li>
+            <li><strong>Today's Sales</strong> — total sales invoiced today</li>
+            <li><strong>Today's Collection</strong> — payments received today</li>
+            <li><strong>Total Outstanding</strong> — money customers still owe you</li>
+            <li><strong>Total Customers</strong> — number of customers in your account</li>
           </ul>
-          <p>Click any card to open that module's workspace.</p>
+        <div class="screenshot">
+          <div class="ss-bar">
+            <div class="ss-dot" style="background:#fe5f57"></div>
+            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+            <div class="ss-url">yourcompany.fateherp.com</div>
+          </div>
+          <img class="ss-img" src="assets/img/screens/02-dashboard.jpg" alt="Dashboard overview showing key business metrics"/>
+          <div class="ss-caption">Dashboard overview showing key business metrics</div>
+        </div>
         </div>
 
         <div class="doc-section">
-          <h2>The Top Navigation Bar</h2>
-          <table class="doc-table">
-            <thead><tr><th>Element</th><th>What it does</th></tr></thead>
-            <tbody>
-              <tr><td>🔍 Search bar</td><td>Search for any document, setting, or menu item by name</td></tr>
-              <tr><td>☰ Navbar menu</td><td>Access all modules and recent documents</td></tr>
-              <tr><td>🔔 Notifications</td><td>See alerts, approvals, and system messages</td></tr>
-              <tr><td>👤 User avatar</td><td>Profile, settings, and logout</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="doc-section">
-          <h2>Keyboard Shortcuts</h2>
-          <table class="doc-table">
-            <thead><tr><th>Shortcut</th><th>Action</th></tr></thead>
-            <tbody>
-              <tr><td><kbd>Ctrl</kbd> + <kbd>/</kbd></td><td>Open global search</td></tr>
-              <tr><td><kbd>Ctrl</kbd> + <kbd>S</kbd></td><td>Save current document</td></tr>
-              <tr><td><kbd>Alt</kbd> + <kbd>←</kbd></td><td>Go back</td></tr>
-              <tr><td><kbd>Ctrl</kbd> + <kbd>N</kbd></td><td>Create new document (on list views)</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="doc-section">
-          <h2>Breadcrumbs</h2>
-          <p>At the top of every page you'll see a breadcrumb trail like: <strong>Selling → Sales Invoice → INV-0001</strong>. Click any item in the trail to go back to that level.</p>
-        </div>
-
-        <div class="doc-section">
-          <h2>Filters &amp; Search in Lists</h2>
-          <p>On any list view (e.g., Customer list, Invoice list), you can:</p>
+          <h2>Left sidebar</h2>
+          <p>Click any item in the left menu to open that section. The current section is highlighted in blue. The menu is split into:</p>
           <ul>
-            <li>Type in the search box to filter by name</li>
-            <li>Click the filter icon (funnel) to add advanced filters (e.g., filter invoices by date range or status)</li>
-            <li>Click column headers to sort</li>
+            <li><strong>SALES</strong> — for selling to your customers</li>
+            <li><strong>PURCHASE</strong> — for buying from your suppliers</li>
+            <li><strong>ACCOUNTING</strong> — for financial entries and reports</li>
           </ul>
         </div>
-    
+
+        <div class="doc-section">
+          <h2>Opening and closing the sidebar</h2>
+          <p>On desktop, click the <strong>grid icon</strong> (☰) at the top of the sidebar to collapse it and get more screen space. Click it again to expand.</p>
+          <p>On mobile, tap the menu icon at the top-left to open the sidebar. Tap anywhere outside it to close.</p>
+        </div>
+
       </div>
       <div class="page-nav"><a href="first-login.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>First Login</span></a><a href="customers.html" class="page-nav-next"><span>Customers</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>

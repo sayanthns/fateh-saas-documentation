@@ -37,20 +37,13 @@
       </div>
       <div class="nav-group"><span class="nav-group-label">Inventory</span>
         <a href="items.html" class="nav-link">Items</a>
-        <a href="stock.html" class="nav-link">Stock</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Reports</span>
-        <a href="reports.html" class="nav-link">Reports Overview</a>
-        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
-        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
-      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -60,56 +53,63 @@
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Sales</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Payments</span></div>
-      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+      <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
           <h1>Payments</h1>
-          <p>Record incoming payments from customers and outgoing payments to suppliers.</p>
+          <p>Record when a customer pays an invoice. This keeps your outstanding balances accurate and your books clean.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Receiving a Payment from a Customer</h2>
+          <h2>Payments list</h2>
+          <p>Click <strong>Payments</strong> in the left menu to see all received payments.</p>
+        <div class="screenshot">
+          <div class="ss-bar">
+            <div class="ss-dot" style="background:#fe5f57"></div>
+            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+            <div class="ss-url">yourcompany.fateherp.com</div>
+          </div>
+          <img class="ss-img" src="assets/img/screens/09-payments-list.jpg" alt="Payments list — all customer payments recorded"/>
+          <div class="ss-caption">Payments list — all customer payments recorded</div>
+        </div>
+        </div>
+
+        <div class="doc-section">
+          <h2>Recording a payment</h2>
+          <p>The easiest way is directly from the invoice:</p>
           <div class="steps">
             <div class="step"><div class="step-num">1</div><div class="step-content">
-              <h4>Open the Sales Invoice</h4>
-              <p>Go to the paid invoice and click <strong>Make → Payment Entry</strong> in the toolbar. The payment form opens with the customer and amount pre-filled.</p>
+              <h4>Open the invoice</h4>
+              <p>Go to <strong>Invoices</strong>, find the invoice that was paid, and click on it to open it.</p>
             </div></div>
             <div class="step"><div class="step-num">2</div><div class="step-content">
-              <h4>Select payment mode</h4>
-              <p>Choose <strong>Mode of Payment</strong>: Bank Transfer, Cash, Cheque, or Credit Card.</p>
+              <h4>Click "Record Payment"</h4>
+              <p>A payment entry opens with the customer name and amount already filled in.</p>
             </div></div>
             <div class="step"><div class="step-num">3</div><div class="step-content">
-              <h4>Set reference number (optional)</h4>
-              <p>For bank transfers, enter the <strong>Reference No.</strong> (e.g., bank transaction ID) and <strong>Reference Date</strong>.</p>
+              <h4>Choose how they paid</h4>
+              <p>Select the <strong>payment mode</strong>: Bank Transfer, Cash, Cheque, or Credit Card.</p>
             </div></div>
             <div class="step"><div class="step-num">4</div><div class="step-content">
-              <h4>Submit</h4>
-              <p>Click <strong>Submit</strong>. The invoice status changes to <strong>Paid</strong>.</p>
+              <h4>Add reference (optional)</h4>
+              <p>For bank transfers, enter the bank transaction reference number. This helps you match payments later.</p>
+            </div></div>
+            <div class="step"><div class="step-num">5</div><div class="step-content">
+              <h4>Save</h4>
+              <p>Click <strong>Save</strong>. The invoice status changes to <strong>Paid</strong> and the customer's outstanding balance decreases.</p>
             </div></div>
           </div>
         </div>
 
         <div class="doc-section">
-          <h2>Partial Payments</h2>
-          <p>If a customer pays part of the invoice, change the <strong>Paid Amount</strong> to the partial amount before submitting. The invoice will show as <strong>Partly Paid</strong>. You can create another payment entry for the remainder later.</p>
+          <h2>Partial payment</h2>
+          <p>If a customer pays only part of the invoice, change the <strong>Amount</strong> to what they actually paid. The invoice will show as <strong>Partly Paid</strong>. Record another payment when they pay the rest.</p>
         </div>
 
-        <div class="doc-section">
-          <h2>Advance Payments</h2>
-          <p>To record an advance payment before issuing an invoice:</p>
-          <ul>
-            <li>Go to <strong>Accounts → Payment Entry → New</strong></li>
-            <li>Set <strong>Payment Type</strong> to <strong>Receive</strong></li>
-            <li>Set <strong>Party Type</strong> to <strong>Customer</strong> and select the customer</li>
-            <li>Leave the invoice reference blank</li>
-            <li>Submit</li>
-          </ul>
-          <p>When you later create the invoice, you can apply the advance payment by using <strong>Get Outstanding Invoices</strong> in the payment entry.</p>
-        </div>
-    
       </div>
       <div class="page-nav"><a href="sales-invoices.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Sales Invoices</span></a><a href="suppliers.html" class="page-nav-next"><span>Suppliers</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>

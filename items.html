@@ -37,20 +37,13 @@
       </div>
       <div class="nav-group"><span class="nav-group-label">Inventory</span>
         <a href="items.html" class="nav-link">Items</a>
-        <a href="stock.html" class="nav-link">Stock</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Reports</span>
-        <a href="reports.html" class="nav-link">Reports Overview</a>
-        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
-        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
-      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -60,59 +53,74 @@
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Inventory</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Items</span></div>
-      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+      <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
           <h1>Items</h1>
-          <p>Items are the products and services you buy and sell. They are the building blocks of all invoices, orders, and stock entries.</p>
+          <p>Items are the products and services you sell. You need to create an item before you can add it to an invoice or quotation.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Creating an Item</h2>
+          <h2>Items list</h2>
+          <p>Click <strong>Items</strong> in the left menu. You'll see all your items with their price and stock level.</p>
+        <div class="screenshot">
+          <div class="ss-bar">
+            <div class="ss-dot" style="background:#fe5f57"></div>
+            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+            <div class="ss-url">yourcompany.fateherp.com</div>
+          </div>
+          <img class="ss-img" src="assets/img/screens/10-items-list.jpg" alt="Items list — all your products and services"/>
+          <div class="ss-caption">Items list — all your products and services</div>
+        </div>
+        </div>
+
+        <div class="doc-section">
+          <h2>Adding a new item</h2>
+          <p>Click <strong>+ New Item</strong>. Fill in the form:</p>
+        <div class="screenshot">
+          <div class="ss-bar">
+            <div class="ss-dot" style="background:#fe5f57"></div>
+            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+            <div class="ss-url">yourcompany.fateherp.com</div>
+          </div>
+          <img class="ss-img" src="assets/img/screens/11-new-item.jpg" alt="New Item form — enter item name, code, price and stock details"/>
+          <div class="ss-caption">New Item form — enter item name, code, price and stock details</div>
+        </div>
           <div class="steps">
             <div class="step"><div class="step-num">1</div><div class="step-content">
-              <h4>Go to Stock → Items → New</h4>
+              <h4>Item Name</h4>
+              <p>A clear name your team will recognise. Example: <em>Office Chair</em> or <em>Consulting Service (1hr)</em>.</p>
             </div></div>
             <div class="step"><div class="step-num">2</div><div class="step-content">
-              <h4>Fill in the basics</h4>
-              <p>Enter <strong>Item Code</strong> (unique identifier), <strong>Item Name</strong> (display name), and <strong>Item Group</strong> (category).</p>
+              <h4>Item Code</h4>
+              <p>A unique code for this item. This appears on invoices. Example: <em>CHAIR-001</em>.</p>
             </div></div>
             <div class="step"><div class="step-num">3</div><div class="step-content">
-              <h4>Set stock and UOM</h4>
-              <p>If this is a physical product, enable <strong>Maintain Stock</strong>. Set the <strong>Unit of Measure</strong> (Nos, Kg, Box, etc.).</p>
+              <h4>Unit of Measure (UOM)</h4>
+              <p>How this item is measured or sold. Common options: <em>Nos</em> (pieces), <em>Kg</em>, <em>Box</em>, <em>Hour</em>.</p>
             </div></div>
             <div class="step"><div class="step-num">4</div><div class="step-content">
-              <h4>Set pricing</h4>
-              <p>Go to the <strong>Sales Price List</strong> tab and add the default selling price. Add a buying price in <strong>Purchase Price List</strong>.</p>
+              <h4>Rate (selling price)</h4>
+              <p>The price you charge customers for one unit of this item, before VAT.</p>
             </div></div>
             <div class="step"><div class="step-num">5</div><div class="step-content">
-              <h4>Set tax template (optional)</h4>
-              <p>In the <strong>Sales Details</strong> tab, set <strong>Item Tax Template</strong> to <strong>Saudi VAT 15%</strong> if this item is taxable.</p>
+              <h4>Is Stock Item?</h4>
+              <p>Tick this if you physically track inventory (e.g., goods in a warehouse). Leave unticked for services.</p>
+            </div></div>
+            <div class="step"><div class="step-num">6</div><div class="step-content">
+              <h4>Click Create Item</h4>
+              <p>The item is now available to select when creating invoices and quotations.</p>
             </div></div>
           </div>
         </div>
 
-        <div class="doc-section">
-          <h2>Stock Items vs. Non-Stock Items</h2>
-          <table class="doc-table">
-            <thead><tr><th>Type</th><th>Description</th><th>Example</th></tr></thead>
-            <tbody>
-              <tr><td>Stock Item</td><td>Physical goods tracked in warehouses</td><td>Product, spare part</td></tr>
-              <tr><td>Non-Stock Item</td><td>Services or consumables not tracked</td><td>Consulting fees, delivery</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="doc-section">
-          <h2>Item Variants</h2>
-          <p>For items that come in different sizes or colors (e.g., a T-shirt in Small, Medium, Large), enable <strong>Has Variants</strong> on the Item Template and define the attributes. Fateh will create separate variant items automatically.</p>
-        </div>
-    
       </div>
-      <div class="page-nav"><a href="purchase-invoices.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Purchase Invoices</span></a><a href="stock.html" class="page-nav-next"><span>Stock</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+      <div class="page-nav"><a href="purchase-invoices.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Purchase Invoices</span></a><a href="vat.html" class="page-nav-next"><span>VAT</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>

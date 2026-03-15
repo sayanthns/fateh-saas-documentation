@@ -37,20 +37,13 @@
       </div>
       <div class="nav-group"><span class="nav-group-label">Inventory</span>
         <a href="items.html" class="nav-link">Items</a>
-        <a href="stock.html" class="nav-link">Stock</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Reports</span>
-        <a href="reports.html" class="nav-link">Reports Overview</a>
-        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
-        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
-      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -60,55 +53,52 @@
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Purchasing</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">Suppliers</span></div>
-      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+      <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
           <h1>Suppliers</h1>
-          <p>Manage your vendor master list — companies or individuals you purchase goods and services from.</p>
+          <p>Add the companies or people you buy from. You need a supplier record before you can create a purchase invoice.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Adding a Supplier</h2>
+          <h2>Suppliers list</h2>
+        <div class="screenshot">
+          <div class="ss-bar">
+            <div class="ss-dot" style="background:#fe5f57"></div>
+            <div class="ss-dot" style="background:#febc2e;margin-left:5px"></div>
+            <div class="ss-dot" style="background:#28c840;margin-left:5px"></div>
+            <div class="ss-url">yourcompany.fateherp.com</div>
+          </div>
+          <img class="ss-img" src="assets/img/screens/15-suppliers-list.jpg" alt="Suppliers list — all your vendors in one place"/>
+          <div class="ss-caption">Suppliers list — all your vendors in one place</div>
+        </div>
+        </div>
+
+        <div class="doc-section">
+          <h2>Adding a new supplier</h2>
+          <p>Click <strong>+ New Supplier</strong> and fill in:</p>
           <div class="steps">
             <div class="step"><div class="step-num">1</div><div class="step-content">
-              <h4>Go to Buying → Suppliers → New</h4>
+              <h4>Supplier Name</h4>
+              <p>The full legal name of the supplier company or individual.</p>
             </div></div>
             <div class="step"><div class="step-num">2</div><div class="step-content">
-              <h4>Fill in supplier details</h4>
-              <p>Enter the <strong>Supplier Name</strong>, <strong>Supplier Group</strong> (Local, Foreign, etc.), and the <strong>VAT Registration Number</strong> (for Saudi suppliers).</p>
+              <h4>Type</h4>
+              <p>Company or Individual.</p>
             </div></div>
             <div class="step"><div class="step-num">3</div><div class="step-content">
-              <h4>Add bank account (optional)</h4>
-              <p>In the <strong>Accounts</strong> tab, add bank account details for this supplier to make payment processing easier.</p>
+              <h4>VAT Registration No.</h4>
+              <p>Enter the supplier's VAT number so you can claim input VAT on their invoices.</p>
             </div></div>
             <div class="step"><div class="step-num">4</div><div class="step-content">
-              <h4>Save</h4>
+              <h4>Click Create Supplier</h4>
             </div></div>
           </div>
         </div>
 
-        <div class="doc-section">
-          <h2>Key Fields</h2>
-          <table class="doc-table">
-            <thead><tr><th>Field</th><th>Description</th></tr></thead>
-            <tbody>
-              <tr><td>Supplier Name</td><td>Legal name of the vendor</td></tr>
-              <tr><td>Supplier Group</td><td>Category for reporting (Local, International, Services, etc.)</td></tr>
-              <tr><td>Tax ID</td><td>Supplier's VAT number (for input VAT claims)</td></tr>
-              <tr><td>Payment Terms</td><td>Default payment days (e.g., Net 30)</td></tr>
-              <tr><td>Currency</td><td>Default currency for purchase invoices</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="doc-section">
-          <h2>Supplier Outstanding Balance</h2>
-          <p>Open a Supplier and scroll to the <strong>Accounts</strong> section to see outstanding amounts — what you still owe to this supplier.</p>
-        </div>
-    
       </div>
       <div class="page-nav"><a href="payments.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Payments</span></a><a href="purchase-invoices.html" class="page-nav-next"><span>Purchase Invoices</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>

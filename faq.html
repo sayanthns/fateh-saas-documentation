@@ -37,20 +37,13 @@
       </div>
       <div class="nav-group"><span class="nav-group-label">Inventory</span>
         <a href="items.html" class="nav-link">Items</a>
-        <a href="stock.html" class="nav-link">Stock</a>
       </div>
       <div class="nav-group"><span class="nav-group-label">Compliance</span>
         <a href="vat.html" class="nav-link">VAT</a>
         <a href="zatca.html" class="nav-link">ZATCA (e-Invoicing)</a>
       </div>
-      <div class="nav-group"><span class="nav-group-label">Reports</span>
-        <a href="reports.html" class="nav-link">Reports Overview</a>
-        <a href="reports-ar.html" class="nav-link">Accounts Receivable</a>
-        <a href="reports-sales.html" class="nav-link">Sales Reports</a>
-      </div>
       <div class="nav-group"><span class="nav-group-label">Help</span>
         <a href="faq.html" class="nav-link">FAQ</a>
-        <a href="glossary.html" class="nav-link">Glossary</a>
         <a href="support.html" class="nav-link">Contact Support</a>
       </div>
     </nav>
@@ -60,67 +53,67 @@
     <header class="topbar">
       <button class="mobile-menu-btn" id="mobileMenuBtn"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
       <div class="topbar-breadcrumb"><span>Docs</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Help</span><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span class="active">FAQ</span></div>
-      <div class="topbar-actions"><a href="https://fateherp.com" class="topbar-btn" target="_blank">Go to App</a></div>
+      <div class="topbar-actions"><a href="https://saas-test.fateherp.com/saas" class="topbar-btn" target="_blank">Go to App</a></div>
     </header>
     <main class="content">
       <div class="content-inner">
 
         <div class="page-hero">
           <h1>Frequently Asked Questions</h1>
-          <p>Common questions from Fateh ERP users.</p>
+          <p>Quick answers to common questions.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Account & Login</h2>
+          <h2>Login & Account</h2>
 
           <h3>I forgot my password. How do I reset it?</h3>
-          <p>On the login page, click <strong>Forgot Password</strong>, enter your email, and follow the link in the reset email. If you don't receive it, check your spam folder or contact <a href="mailto:support@fateherp.com">support@fateherp.com</a>.</p>
+          <p>Click <strong>Forgot password?</strong> on the login screen, enter your email, and check your inbox for a reset link. If you don't receive it within 5 minutes, check your spam folder or contact <a href="mailto:support@fateherp.com">support@fateherp.com</a>.</p>
 
-          <h3>Can multiple users log in at the same time?</h3>
-          <p>Yes. Fateh ERP supports multiple concurrent users. Each user has their own login and can be assigned different roles (e.g., Accounts Manager, Sales User) to restrict what they can see and do.</p>
+          <h3>Can I have more than one user on my account?</h3>
+          <p>Yes. Ask your Fateh account manager or email support to add extra users. Each user has their own login credentials.</p>
 
-          <h3>How do I add a new user?</h3>
-          <p>Go to <strong>Settings → Users → New User</strong>. Enter the new user's email, assign a role, and click <strong>Send Welcome Email</strong>. They'll receive login instructions by email.</p>
+          <h3>Can I use Fateh ERP on my phone?</h3>
+          <p>Yes. Open your browser on any phone or tablet and go to your Fateh ERP link. The interface adjusts to fit smaller screens automatically.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Invoicing & ZATCA</h2>
+          <h2>Invoices & Payments</h2>
 
-          <h3>Can I edit an invoice after submitting it?</h3>
-          <p>No. Once submitted, a Sales Invoice is legally binding and locked. If you made a mistake, you need to issue a <strong>Credit Note</strong> to reverse the original invoice, then create a corrected invoice.</p>
+          <h3>Can I edit an invoice after I've submitted it?</h3>
+          <p>No. Once submitted, an invoice is final (this is a ZATCA requirement). If you made a mistake, cancel the invoice and create a new one with the correct details.</p>
 
-          <h3>My ZATCA submission failed. What do I do?</h3>
-          <p>Check the error message on the invoice in the ZATCA section. Common fixes include adding the customer's VAT number for B2B invoices or correcting the address. Then cancel the invoice, fix the customer or item data, and create a new invoice.</p>
+          <h3>A customer overpaid — what do I do?</h3>
+          <p>Record the full amount they paid. The extra amount will show as a credit on their account, which can be applied to their next invoice. Contact support if you need help with this.</p>
 
-          <h3>Does Fateh ERP support credit notes?</h3>
-          <p>Yes. Open the original Sales Invoice and click <strong>Make → Return / Credit Note</strong>. Adjust the quantities and amounts as needed and submit.</p>
+          <h3>How do I issue a refund or credit note?</h3>
+          <p>Open the original invoice and look for the <strong>Return / Credit Note</strong> option. This creates a credit note that reverses the original invoice (fully or partially).</p>
 
-          <h3>Can I issue invoices in USD or another currency?</h3>
-          <p>Yes. On the Sales Invoice, change the <strong>Currency</strong> field. The VAT will still be calculated and reported in SAR as required by ZATCA.</p>
+          <h3>My invoice shows "Overdue" — what does that mean?</h3>
+          <p>The due date on the invoice has passed and the customer hasn't paid yet. Follow up with the customer. Once they pay, record the payment and the invoice will move to Paid.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Stock & Items</h2>
+          <h2>Items & Stock</h2>
 
-          <h3>My item stock is showing negative. How do I fix it?</h3>
-          <p>A negative stock usually means you sold or issued more items than you had. Do a <strong>Stock Reconciliation</strong> (Stock → Stock Reconciliation) to set the correct quantities.</p>
+          <h3>I added an item but can't find it in the invoice dropdown</h3>
+          <p>Make sure the item is saved (not just a draft). Go to <strong>Items</strong> and confirm it appears in the list. Then try creating the invoice again.</p>
 
-          <h3>Can I sell a service without tracking stock?</h3>
-          <p>Yes. Create the item with <strong>Maintain Stock = No</strong>. It will appear on invoices but won't affect warehouse stock levels.</p>
+          <h3>Do I have to use Items? Can I just type a description on the invoice?</h3>
+          <p>You need to select items from your items list. If you have a one-off service, create a generic item like "Professional Services" and change the description and amount each time.</p>
         </div>
 
         <div class="doc-section">
-          <h2>Data & Backups</h2>
+          <h2>VAT & ZATCA</h2>
 
-          <h3>How is my data backed up?</h3>
-          <p>Fateh ERP performs automatic daily backups. All data is stored securely in the cloud. You can also download a manual backup anytime from <strong>Settings → Backups → Download Latest Backup</strong>.</p>
+          <h3>I don't see a ZATCA status on my invoice</h3>
+          <p>Make sure you clicked <strong>Submit</strong> (not just Save as Draft). Draft invoices are not sent to ZATCA. Only submitted invoices are cleared.</p>
 
-          <h3>Can I import my existing data from Excel?</h3>
-          <p>Yes. Fateh ERP supports data import for Customers, Suppliers, Items, and more. Go to <strong>Settings → Data Import</strong>, download the template for the doctype you want, fill it in, and upload.</p>
+          <h3>Do I need to file my VAT return through Fateh?</h3>
+          <p>Fateh ERP records all your VAT data. However, you (or your accountant) still need to log into the ZATCA portal to submit the actual VAT return and pay the amount due each quarter.</p>
         </div>
-    
+
       </div>
-      <div class="page-nav"><a href="reports-sales.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>Sales Reports</span></a><a href="glossary.html" class="page-nav-next"><span>Glossary</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
+      <div class="page-nav"><a href="zatca.html" class="page-nav-prev"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg><span>ZATCA</span></a><a href="support.html" class="page-nav-next"><span>Contact Support</span><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a></div>
     </main>
     <footer class="doc-footer"><p>© 2025 Fateh ERP · <a href="support.html">Support</a></p></footer>
   </div>
